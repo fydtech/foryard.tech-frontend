@@ -44,6 +44,15 @@ View the full documentation at https://tailwindcss.com.
 */
 
 let colors = {
+  'caribbean-green': '#26e88a',
+  'faded-lime': '#8bf17f',
+  'shark': '#383838',
+  'tangaroa': '#202d3a',
+  'white-lilac': '#e8e8e8',
+  'royal-heath': '#af4775',
+  'black-dark': '#1a242f',
+  'black-light': '#202d39',
+
   'transparent': 'transparent',
 
   'black': '#22292f',
@@ -226,7 +235,10 @@ module.exports = {
       'Liberation Mono',
       'Courier New',
       'monospace',
-    ]
+    ],
+    'montserrat': 'Montserrat',
+    'hind': 'Hind',
+    'plex': 'IBM Plex Mono'
   },
 
 

@@ -1,20 +1,57 @@
 <template>
-  <div class="bg-red offset-10">
-    <div>
+  <div class="flex flex-col">
+    <div class="flex-1 bg-white text-center offset-y-20">
       <vue-anime-time-line
         ref="demo11"
+        :delay="(el, i)=>i * 500"
         :seek="seek">
-        <vue-anime v-for="(key, index) in words"
-        :key="'key' + index"
-        class="square inline-block"
-        offset="-=200"
-        autoplay="true"
-        duration="500"
-        :animate="{
-          translateY: [ {value: -10, duration: 500 } ],
-          opacity: [{ value: 1 }]
-        }">{{ key }}</vue-anime>
+        <h1>
+          <vue-anime v-for="(key, index) in words(sentence1)"
+            :key="'key' + index"
+            class="opacity-0 inline-block font-sans font-montserrat font-extrabold"
+            offset="-=700"
+            autoplay="true"
+            :duration="1000"
+            :animate="{
+              translateY: [ {value: -15, duration: 800 } ],
+              scale: [{value: 2, duration: 100, easeOut: easeOutCubic}, {value: 1, duration: 800, easeOut: easeOutCubic}],
+              opacity: [{ value: 1, duration: 1000 }]
+            }">{{ key + '&nbsp;' }}
+          </vue-anime>
+        </h1>
+        <h2>
+          <vue-anime v-for="(key, index) in words(sentence2)"
+            :delay="200"
+            :key="'key' + index"
+            class="opacity-0 inline-block font-sans font-montserrat font-extrabold text-2xl"
+            autoplay="true"
+            :duration="300"
+            :animate="{
+              translateY: [ {value: -15, duration: 800 } ],
+              opacity: [{ value: 1, duration: 1000 }]
+            }">{{ key + '&nbsp;' }}
+          </vue-anime>
+        </h2>
       </vue-anime-time-line>
+    </div>
+    <div class="flex flex-row bg-white">
+      <div class="flex-1 text-center">
+        Laravel
+      </div>
+      <div class="flex-1 text-center">
+        Vue
+      </div>
+    </div>
+    <div class="flex flex-row bg-grey-lightest">
+      <div class="flex-1 text-center bg-grey-light m-10">
+        Product 1
+      </div>
+      <div class="flex-1 text-center bg-grey-light m-10">
+        Product 2
+      </div>
+      <div class="flex-1 text-center bg-grey-light m-10">
+        Product 3
+      </div>
     </div>
   </div>
 </template>
@@ -33,25 +70,20 @@ export default {
   },
   data() {
     return {
-      sentence: 'Lorem ipsum dolor sit amet',
+      sentence1: ',,Wij,maken,webapplicaties,op maat',
+      sentence2: 'met bewezen moderne technologie',
       seek: null
     };
   },
-  computed: {
-    words() {
-      return this.sentence.split(" ");
+  methods: {
+    words(sentence) {
+      return sentence.split(",");
     }
   }
 }
 </script>
 <style>
-  .word {
-    width: 10px;
-  }
-  .square, .circle {
-    opacity: 0;
-  }
-  .offset-10 {
-    transform: translateY(10px);
+  .offset-y-20 {
+    transform: translateY(20px);
   }
 </style>
