@@ -5,13 +5,14 @@
       <p>Case beschrijving</p>
     </div>
     <div class="flex flex-row">
-      <div class="bg-blue p-2 m-2">
+      <!-- These tags should also go into a separete reusable component. -->
+      <div class="bg-blue p-2 m-2 font-plex italic">
         Tag
       </div>
-      <div class="bg-blue p-2 m-2">
+      <div class="bg-blue p-2 m-2 font-plex italic">
         Tag
       </div>
-      <div class="bg-blue p-2 m-2">
+      <div class="bg-blue p-2 m-2 font-plex italic">
         Tag
       </div>
     </div>
