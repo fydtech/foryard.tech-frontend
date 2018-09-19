@@ -1,26 +1,20 @@
 <template>
-  <div class="flex flex-col">
-    <div class="flex-1 bg-white text-center">
-      <h1>Hoi, wij zijn een development team</h1>
-      <h2>wat wij doen</h2>
+  <div id="header" class="flex flex-col relative pb-16">
+    <div class="flex-1 text-start m-10 max-w-sm">
+      <h1 class="uppercase text-caribbean-green">Wij maken webapplicaties op maat</h1>
+      <p class="mt-20 text-white">met bewezen moderne technologie</p>
     </div>
-    <div class="flex flex-row bg-white">
-      <div class="flex-1 text-center">
-        Laravel
+    <div class="flex flex-row m-10">
+      <div class="flex mr-10">
+        <img src="images/laravel.svg">
       </div>
-      <div class="flex-1 text-center">
-        Vue
+      <div class="flex">
+        <img src="images/vue.svg">
       </div>
     </div>
-    <div class="flex flex-row bg-grey-lightest">
-      <div class="flex-1 text-center bg-grey-light m-10">
-        Product 1
-      </div>
-      <div class="flex-1 text-center bg-grey-light m-10">
-        Product 2
-      </div>
-      <div class="flex-1 text-center bg-grey-light m-10">
-        Product 3
+    <div class="flex text-center">
+      <div class="flex-1">
+        <img src="images/chevron-down.svg" />
       </div>
     </div>
   </div>
@@ -31,3 +25,10 @@ export default {
   name: 'BannerSection'
 }
 </script>
+
+<style>
+#header {
+  background: linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9)), url("/images/header-bg.jpg");
+  background-size: cover;
+}
+</style>
