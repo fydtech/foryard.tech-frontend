@@ -1,8 +1,22 @@
 <template>
-  <div class="bg-yellow">
-    This is the Case Section
-    <single-case />
-    <single-case />
+  <div class="flex bg-white">
+    <div class="flex flex-col">
+      <div class="flex-1 bg-grey-light p-16 m-4">
+        Case
+      </div>
+      <div class="flex-1 bg-grey-light p-16 m-4">
+        Case
+      </div>
+      <div class="flex-1 bg-grey-light p-16 m-4">
+        Case
+      </div>
+      <div class="flex-1 bg-grey-light p-16 m-4">
+        Case
+      </div>
+    </div>
+    <div class="flex-1 pt-24">
+        <single-case />
+    </div>
   </div>
 </template>
 
