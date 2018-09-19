@@ -1,0 +1,59 @@
+<template>
+  <div>
+    <a
+      class="inline-flex items-center no-underline"
+      @mousedown.native="changeMouse"
+      @mouseup.native="changeMouse" >
+      <button
+        :class="[mouseDown ? 'move-d-1 shadow-green' : '']"
+        class="text-white bg-caribbean-green h-10 w-10 rounded-full shadow-green move-fast shadow-green focus:outline-none flex items-center justify-center">
+        <img
+          v-if="direction === 'left'"
+          src="@/assets/img/chevron-prev.svg" />
+        <img
+          v-else-if="direction === 'right'"
+          src="@/assets/img/chevron-next.svg" />
+      </button>
+      <span
+        v-if="buttonLabel"
+        class="pl-4 uppercase text-tag-grey font-bold font-montserrat opacity-30">{{ buttonLabel }}</span>
+    </a>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "ButtonCircle",
+
+  props: {
+    direction: {
+      type: String,
+      required: true,
+      validator: function(value) {
+        return ["left", "right"].indexOf(value) !== -1;
+      }
+    },
+
+    buttonLabel: {
+      type: String,
+      required: false,
+      default: null
+    }
+  },
+
+  data() {
+    return {
+      mouseDown: false
+    };
+  },
+
+  methods: {
+    changeMouse() {
+      this.mouseDown = !this.mouseDown
+    }
+  }
+};
+</script>
+
+<style>
+</style>
