@@ -50,6 +50,8 @@ let colors = {
   'tangaroa': '#202d3a',
   'white-lilac': '#e8e8e8',
   'royal-heath': '#af4775',
+  'black-dark': '#1a242f',
+  'black-light': '#202d39',
 
   'transparent': 'transparent',
 
