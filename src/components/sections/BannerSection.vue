@@ -6,15 +6,15 @@
     </div>
     <div class="flex flex-row m-10">
       <div class="flex mr-10">
-        <img src="images/laravel.svg">
+        <img src="@/assets/img/laravel.svg">
       </div>
       <div class="flex">
-        <img src="images/vue.svg">
+        <img src="@/assets/img/vue.svg">
       </div>
     </div>
     <div class="flex text-center">
       <div class="flex-1">
-        <img src="images/chevron-down.svg" />
+        <img src="@/assets/img/chevron-down.svg" />
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
 
 <style>
 #header {
-  background: linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9)), url("/images/header-bg.jpg");
+  background: linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9)), url("~@/assets/img/header-bg.jpg");
   background-size: cover;
 }
 </style>
