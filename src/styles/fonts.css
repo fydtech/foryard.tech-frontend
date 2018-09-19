@@ -1,10 +1,54 @@
-/*@font-face {
-  font-family: 'Oxygen';
+@font-face {
+  font-family: 'Montserrat';
   font-display: swap;
   font-style: normal;
   font-weight: 300;
-  src: local('Oxygen Light'), local('Oxygen-Light'),
-       url('~@/assets/fonts/Oxygen-Light.woff2') format('woff2'),
-       url('~@/assets//fonts/Oxygen-Light.woff') format('woff'),
-       url('~@/assets//fonts/Oxygen-Light.ttf') format('truetype');
-}*/
+  src: url('~@/assets/fonts/montserrat-v12-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat Light'), local('Montserrat-Light'),
+       url('~@/assets/fonts/montserrat-v12-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('~@/assets/fonts/montserrat-v12-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('~@/assets/fonts/montserrat-v12-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('~@/assets/fonts/montserrat-v12-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('~@/assets/fonts/montserrat-v12-latin-300.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+  src: url('~@/assets/fonts/montserrat-v12-latin-800.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
+       url('~@/assets/fonts/montserrat-v12-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('~@/assets/fonts/montserrat-v12-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('~@/assets/fonts/montserrat-v12-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('~@/assets/fonts/montserrat-v12-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('~@/assets/fonts/montserrat-v12-latin-800.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Hind';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('~@/assets/fonts/hind-v8-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Hind Regular'), local('Hind-Regular'),
+       url('~@/assets/fonts/hind-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('~@/assets/fonts/hind-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('~@/assets/fonts/hind-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('~@/assets/fonts/hind-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('~@/assets/fonts/hind-v8-latin-regular.svg#Hind') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('~@/assets/fonts/ibm-plex-mono-v3-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('IBM Plex Mono Italic'), local('IBMPlexMono-Italic'),
+       url('~@/assets/fonts/ibm-plex-mono-v3-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('~@/assets/fonts/ibm-plex-mono-v3-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('~@/assets/fonts/ibm-plex-mono-v3-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('~@/assets/fonts/ibm-plex-mono-v3-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('~@/assets/fonts/ibm-plex-mono-v3-latin-italic.svg#IBMPlexMono') format('svg'); /* Legacy iOS */
+}

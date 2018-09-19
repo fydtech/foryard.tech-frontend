@@ -60,3 +60,11 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sans font-montserrat font-extrabold
+}
+
+p, span, a, div {
+  @apply font-sans font-hind
+}

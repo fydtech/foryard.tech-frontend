@@ -226,7 +226,10 @@ module.exports = {
       'Liberation Mono',
       'Courier New',
       'monospace',
-    ]
+    ],
+    'montserrat': 'Montserrat',
+    'hind': 'Hind',
+    'plex': 'IBM Plex Mono'
   },
 
 
