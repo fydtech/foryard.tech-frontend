@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col bg-grey-lightest">
+  <div
+    id="team"
+    class="flex flex-col bg-grey-lightest">
     <div class="flex-1 text-center">
       <h1>Team</h1>
       <h2>Teambeschrijving</h2>

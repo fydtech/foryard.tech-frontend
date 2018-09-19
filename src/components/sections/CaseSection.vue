@@ -1,5 +1,7 @@
 <template>
-  <div class="flex bg-white">
+  <div
+    id="cases"
+    class="flex bg-white">
     <div class="flex flex-col">
       <div class="flex-1 bg-grey-light p-16 m-4">
         Case

@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col bg-green pt-10 pl-10">
+  <div
+    id="contact"
+    class="flex flex-col bg-green pt-10 pl-10">
     <div class="flex-1">
       <h1>Let's grab a coffee</h1>
     </div>
