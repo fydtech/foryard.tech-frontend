@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="14.6444444%" y1="14.6444444%" x2="85.3444444%" y2="85.3555556%" id="linearGradient-1">
+            <stop stop-color="#8BF17F" offset="0%"></stop>
+            <stop stop-color="#26E88A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Foryard-Logo-FC" transform="translate(0.000000, -239.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <circle id="Oval" cx="45" cy="284" r="45"></circle>
+        </g>
+    </g>
+</svg>
