@@ -68,3 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 p, span, a, div {
   @apply font-sans font-hind
 }
+
+a {
+  @apply no-underline
+}
