@@ -1,14 +1,14 @@
 <template>
-  <div class="flex flex-col">
-    <div class="flex-1 bg-white text-center mt-10">
+  <div id="header" class="flex flex-col relative pb-16">
+    <div class="flex-1 text-left m-8">
       <vue-anime-time-line>
         <h1>
           <vue-anime
             :duration="1100"
-            class="opacity-0 inline-block font-sans font-montserrat font-extrabold"
+            class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green"
             autoplay="true"
             :animate="{
-              translateY: [ {value: -25, duration: 1000, easing: 'easeOutQuint' } ],
+              translateY: [ {value: -25, duration: 1000, easing: 'easeOutQuint' }],
               opacity: [{ value: 1, duration: 1000 }],
               scale: [{value: 1.5, duration: 100, easing: 'easeOutElastic' }, {value: 1, duration: 900, easing: 'easeOutElastic' }],
             }">{{ words(sentence1)[0] + '&nbsp;' }}
@@ -16,7 +16,7 @@
           <vue-anime v-for="(key, index) in words(sentence1).slice(1)"
             :duration="1000"
             :key="'key' + index"
-            class="opacity-0 inline-block font-sans font-montserrat font-extrabold"
+            class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green"
             autoplay="true"
             offset="-=500"
             :animate="{
@@ -31,7 +31,7 @@
             :duration="800"
             offset="-=600"
             :key="'key' + index"
-            class="opacity-0 inline-block font-sans font-montserrat font-extrabold text-2xl mt-6"
+            class="opacity-0 inline-block font-sans font-hind font-normal text-white text-2xl mt-6"
             autoplay="true"
             :animate="{
               translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
@@ -41,23 +41,17 @@
         </h2>
       </vue-anime-time-line>
     </div>
-    <div class="flex flex-row bg-white">
-      <div class="flex-1 text-center">
-        Laravel
+    <div class="flex flex-row m-10">
+      <div class="flex mr-10">
+        <img src="@/assets/img/laravel.svg">
       </div>
-      <div class="flex-1 text-center">
-        Vue
+      <div class="flex">
+        <img src="@/assets/img/vue.svg">
       </div>
     </div>
-    <div class="flex flex-row bg-grey-lightest">
-      <div class="flex-1 text-center bg-grey-light m-10">
-        Product 1
-      </div>
-      <div class="flex-1 text-center bg-grey-light m-10">
-        Product 2
-      </div>
-      <div class="flex-1 text-center bg-grey-light m-10">
-        Product 3
+    <div class="flex text-center">
+      <div class="flex-1">
+        <img src="@/assets/img/chevron-down.svg" />
       </div>
     </div>
   </div>
@@ -77,7 +71,7 @@ export default {
   },
   data() {
     return {
-      sentence1: 'Wij,maken,webapplicaties,op maat',
+      sentence1: 'Wij,maken,webapplicaties',
       sentence2: 'met,bewezen,moderne,technologie,',
       seek: null
     };
@@ -89,3 +83,10 @@ export default {
   }
 }
 </script>
+
+<style>
+#header {
+  background: linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9)), url("~@/assets/img/header-bg.jpg");
+  background-size: cover;
+}
+</style>
