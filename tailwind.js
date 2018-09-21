@@ -52,6 +52,7 @@ let colors = {
   'royal-heath': '#af4775',
   'black-dark': '#1a242f',
   'black-light': '#202d39',
+  'tag-grey': '#48525d',
 
   'transparent': 'transparent',
 
@@ -544,6 +545,7 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '96': '24rem',
     'full': '100%',
     'screen': '100vh'
   },
@@ -606,6 +608,7 @@ module.exports = {
   */
 
   maxWidth: {
+    'none': 'none',
     'xs': '20rem',
     'sm': '30rem',
     'md': '40rem',
