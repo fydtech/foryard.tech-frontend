@@ -3,8 +3,7 @@
     <div class="flex-1 bg-white text-center offset-y-20">
       <vue-anime-time-line
         ref="demo11"
-        :delay="(el, i)=>i * 500"
-        :seek="seek">
+        :delay="(el, i)=>i * 2000">
         <h1>
           <vue-anime v-for="(key, index) in words(sentence1)"
             :key="'key' + index"
@@ -13,9 +12,9 @@
             autoplay="true"
             :duration="1000"
             :animate="{
-              translateY: [ {value: -15, duration: 800 } ],
-              scale: [{value: 2, duration: 100, easeOut: easeOutCubic}, {value: 1, duration: 800, easeOut: easeOutCubic}],
-              opacity: [{ value: 1, duration: 1000 }]
+              translateY: [ {value: -15, duration: 600, easing: 'easeInElastic' } ],
+              scale: [{value: 2, duration: 100 }, {value: 1, duration: 700 }],
+              opacity: [{ value: 1, duration: 800 }]
             }">{{ key + '&nbsp;' }}
           </vue-anime>
         </h1>
@@ -26,9 +25,10 @@
             class="opacity-0 inline-block font-sans font-montserrat font-extrabold text-2xl"
             autoplay="true"
             :duration="300"
+            offset="-=700"
             :animate="{
-              translateY: [ {value: -15, duration: 800 } ],
-              opacity: [{ value: 1, duration: 1000 }]
+              translateY: [ {value: -15, duration: 600, easing: 'easeOutElastic' } ],
+              opacity: [{ value: 1, duration: 800 }]
             }">{{ key + '&nbsp;' }}
           </vue-anime>
         </h2>
@@ -70,8 +70,8 @@ export default {
   },
   data() {
     return {
-      sentence1: ',,Wij,maken,webapplicaties,op maat',
-      sentence2: 'met bewezen moderne technologie',
+      sentence1: ',,,Wij,maken,webapplicaties,op maat',
+      sentence2: 'met bewezen, moderne technologie',
       seek: null
     };
   },
