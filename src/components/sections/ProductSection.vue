@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col lg:flex-row pt-12">
+  <div class="flex flex-col lg:flex-row py-20">
     <div class="flex-1 m-4">
       <icon-with-text
         title="Webapplicaties"
