@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col">
-    <div class="flex-1 bg-white text-center offset-y-20">
+    <div class="flex-1 bg-white text-center mt-10">
       <vue-anime-time-line>
         <h1>
           <vue-anime v-for="(key, index) in words(sentence1)"
@@ -10,8 +10,8 @@
             autoplay="true"
             :duration="1000"
             :animate="{
-              translateY: [ {value: -15, duration: 700, easing: 'easeOutElastic'} ],
-              scale: [{value: 1.4, duration: 100 }, {value: 1, duration: 700 }],
+              translateY: [ {value: -5, duration: 700, easing: 'easeOutElastic'} ],
+              // scale: [{value: 1.4, duration: 100 }, {value: 1, duration: 700 }],
               opacity: [{ value: 1, duration: 800 }]
             }">{{ key + '&nbsp;' }}
           </vue-anime>
@@ -69,7 +69,7 @@ export default {
   data() {
     return {
       sentence1: ',,,,,Wij ,maken ,webapplicaties ,op maat',
-      sentence2: ',,,met bewezen ,moderne ,technologie',
+      sentence2: ',,met bewezen ,moderne ,technologie',
       seek: null
     };
   },
@@ -80,8 +80,3 @@ export default {
   }
 }
 </script>
-<style>
-  .offset-y-20 {
-    transform: translateY(20px);
-  }
-</style>
