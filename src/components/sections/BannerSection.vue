@@ -71,14 +71,13 @@ export default {
   },
   data() {
     return {
-      sentence1: 'Wij,maken,webapplicaties',
-      sentence2: 'met,bewezen,moderne,technologie,',
-      seek: null
+      sentence1: 'Wij maken webapplicaties',
+      sentence2: 'met bewezen moderne technologie'
     };
   },
   methods: {
     words(sentence) {
-      return sentence.split(",");
+      return sentence.split(" ");
     }
   }
 }
