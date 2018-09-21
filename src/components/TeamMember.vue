@@ -1,0 +1,44 @@
+<template>
+  <div class="flex flex-row">
+    <div class="flex mr-4">
+      <img
+        class="rounded-full w-24 h-24"
+        :src="image">
+    </div>
+    <div class="flex flex-col">
+      <div class="flex text-caribbean-green text-bold uppercase">
+        {{ name }}
+      </div>
+      <div class="flex italic">
+        {{ role }}
+      </div>
+      <div class="flex text-grey">
+        {{ expertise }}
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'TeamMember',
+  props: {
+    image: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    role: {
+      type: String,
+      required: true,
+    },
+    expertise: {
+      type: String,
+      required: true,
+    }
+  }
+}
+</script>
