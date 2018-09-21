@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-col">
     <div class="flex-1 bg-white text-center offset-y-20">
-      <vue-anime-time-line
-        ref="demo11"
-        :delay="(el, i)=>i * 2000">
+      <vue-anime-time-line>
         <h1>
           <vue-anime v-for="(key, index) in words(sentence1)"
             :key="'key' + index"
@@ -27,7 +25,7 @@
             :duration="300"
             offset="-=700"
             :animate="{
-              translateY: [ {value: -15, duration: 600, easing: 'easeOutElastic' } ],
+              translateY: [ {value: -5, duration: 700, easing: 'easeOutElastic' } ],
               opacity: [{ value: 1, duration: 800 }]
             }">{{ key + '&nbsp;' }}
           </vue-anime>
@@ -70,8 +68,8 @@ export default {
   },
   data() {
     return {
-      sentence1: ',,,,,Wij,maken,webapplicaties,op maat',
-      sentence2: ',,,met bewezen, moderne technologie',
+      sentence1: ',,,,,Wij ,maken ,webapplicaties ,op maat',
+      sentence2: ',,,met bewezen ,moderne ,technologie',
       seek: null
     };
   },
