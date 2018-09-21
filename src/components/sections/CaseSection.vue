@@ -4,22 +4,22 @@
       <div class="flex w-full justify-center">
         <h1 class="uppercase text-white py-12 tracking-wide text-4xl">Cases</h1>
       </div>
-      <div class="flex w-full justify-center">
+      <div class="flex flex-wrap w-full md:justify-center">
         <div class="flex mx-8 mb-4" v-for="(item, index) in cases" :key="'case'+index">
-          <a href="" @click="selectedCase = index">
-            <h2 class="uppercase text-white font-light tracking-wide text-2xl" v-text="item.name"></h2>
+          <a href="" @click.prevent="selectedCase = index">
+            <h2 class="uppercase text-white font-light tracking-wide text-lg md:text-2xl py-2" v-text="item.name"></h2>
           </a>
         </div>
       </div>
     </div>
 
-    <div class="flex justify-center bg-black-light">
-      <div class="flex w-1/2 my-16 pr-16" id="macbook">
-        <img class="h-96 max-w-none" src="@/assets/img/MacBook-Gold.png" alt="MacBook" />
+    <div class="flex flex-col md:flex-row justify-center bg-black-light">
+      <div class="invisible md:visible flex w-1/2 md:my-24 md:pr-16" id="macbook">
+        <img class="hidden md:block h-96 max-w-none" src="@/assets/img/MacBook-Gold.png" alt="MacBook" />
       </div>
-      <div class="flex-1 flex-col w-1/2 pt-24">
+      <div class="flex flex-col w-full md:w-1/2 pt-12 md:pt-24 px-8 md:px-0">
           <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
-          <div class="flex mt-6 self-end">
+          <div class="flex flex-none mb-16 mt-4">
             <button-circle direction="left" @click.native="prevCase()" class="mr-3" />
             <button-circle direction="right" @click.native="nextCase()" buttonLabel="Volgende case" />
           </div>

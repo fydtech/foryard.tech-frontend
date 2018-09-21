@@ -1,65 +1,87 @@
 export const cases = [
   {
     name: 'Buitenlandportaal',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    description: `Het Buitenlandportaal, een project van de Sociale Verzekeringsbank,
+                  is een webapplicatie waarbij burgers na geavanceerde verificatie op
+                  een veilige manier documenten kunnen indienen ter controle.`,
     tags: [
       'laravel',
-      'vue.js',
-      'tailwind',
-      'php'
+      'bootstrap',
+      'devops',
+      'security',
+      'payments',
+      'verification',
+      'documents',
+      'crm',
+      'mollie',
+      'search'
     ]
   },
   {
     name: 'Stupas',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labohenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    description: `Stupas is een intuïtieve enquête die studenten helpt met het voorbereiden
+                  van hun studie of stage in het buitenland. Op basis van de resultaten krijgt
+                  de student gepersonaliseerde adviezen in een interactief stappenplan.`,
     tags: [
-      'laravel',
       'vue.js',
-      'tailwind',
-      'php'
+      'bulma',
+      'laravel',
+      'privacy',
+      'ux',
+      'performance',
+      'sass'
     ]
   },
   {
     name: 'Stem',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et atua deserunt mollit anim id est laborum.`,
+    description: `Stem is een platform waarop bedrijfsaandelen kunnen worden uitgegeven en
+                  verhandeld onder medewerkers. De transacties vinden plaats op het Stellar
+                  blockchain netwerk.`,
     tags: [
       'laravel',
       'vue.js',
-      'tailwind',
-      'php'
+      'bootstrap',
+      'queue',
+      'transactions',
+      'payments',
+      'blockchain',
+      'stellar',
+      'security',
+      'node.js',
+      'stripe',
+      'scalable'
     ]
   },
   {
     name: 'OnzeZon',
-    description: `Lorem ipsum dolor sit amet,  pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    description: `OnzeZon is een platform waar coöperatief kan worden geïnvesteerd in zonnepanelen.
+                  Via de webapplicatie kunnen klanten kunnen geworven, contactmomenten worden beheerd
+                  en zonnepanelen worden besteld en geleverd.`,
     tags: [
+      'bootstrap',
       'laravel',
-      'vue.js',
-      'tailwind',
-      'php'
+      'mollie',
+      'search',
+      'payments',
+      'crm',
+      'cms',
+      'invoices',
+      'sass',
+      'api'
     ]
   },
   {
     name: 'CHIMP',
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullapariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    description: `CHIMP is een SaaS-platform waar organisaties hun problemen en ideeën kunnen beheren,
+                  prioriteren en begroten.`,
     tags: [
       'laravel',
-      'vue.js',
-      'tailwind',
-      'php'
+      'search',
+      'bootstrap',
+      'saas',
+      'scalable',
+      'security',
+      'vue.js'
     ]
   },
 ]
