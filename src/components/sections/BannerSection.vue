@@ -12,8 +12,8 @@
             autoplay="true"
             :duration="1000"
             :animate="{
-              translateY: [ {value: -15, duration: 600, easing: 'easeInElastic' } ],
-              scale: [{value: 2, duration: 100 }, {value: 1, duration: 700 }],
+              translateY: [ {value: -15, duration: 700, easing: 'easeOutElastic'} ],
+              scale: [{value: 1.4, duration: 100 }, {value: 1, duration: 700 }],
               opacity: [{ value: 1, duration: 800 }]
             }">{{ key + '&nbsp;' }}
           </vue-anime>
@@ -70,8 +70,8 @@ export default {
   },
   data() {
     return {
-      sentence1: ',,,Wij,maken,webapplicaties,op maat',
-      sentence2: 'met bewezen, moderne technologie',
+      sentence1: ',,,,,Wij,maken,webapplicaties,op maat',
+      sentence2: ',,,met bewezen, moderne technologie',
       seek: null
     };
   },
