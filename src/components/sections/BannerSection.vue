@@ -31,7 +31,7 @@
             :duration="800"
             offset="-=600"
             :key="'key' + index"
-            class="opacity-0 inline-block font-sans font-montserrat font-extrabold text-2xl mt-8"
+            class="opacity-0 inline-block font-sans font-montserrat font-extrabold text-2xl mt-6"
             autoplay="true"
             :animate="{
               translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
