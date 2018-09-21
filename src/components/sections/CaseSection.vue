@@ -50,7 +50,6 @@ export default {
 
   methods: {
     nextCase () {
-      console.log('test')
       if (this.selectedCase < this.cases.length - 1) {
         this.selectedCase++
         return
