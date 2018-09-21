@@ -3,29 +3,38 @@
     <div class="flex-1 bg-white text-center mt-10">
       <vue-anime-time-line>
         <h1>
-          <vue-anime v-for="(key, index) in words(sentence1)"
+          <vue-anime
+            :duration="1100"
+            class="opacity-0 inline-block font-sans font-montserrat font-extrabold"
+            autoplay="true"
+            :animate="{
+              translateY: [ {value: -25, duration: 1000, easing: 'easeOutQuint' } ],
+              opacity: [{ value: 1, duration: 1000 }],
+              scale: [{value: 1.5, duration: 100, easing: 'easeOutElastic' }, {value: 1, duration: 900, easing: 'easeOutElastic' }],
+            }">{{ words(sentence1)[0] + '&nbsp;' }}
+          </vue-anime>
+          <vue-anime v-for="(key, index) in words(sentence1).slice(1)"
+            :duration="1000"
             :key="'key' + index"
             class="opacity-0 inline-block font-sans font-montserrat font-extrabold"
-            offset="-=700"
             autoplay="true"
-            :duration="1000"
+            offset="-=500"
             :animate="{
-              translateY: [ {value: -5, duration: 700, easing: 'easeOutElastic'} ],
-              // scale: [{value: 1.4, duration: 100 }, {value: 1, duration: 700 }],
-              opacity: [{ value: 1, duration: 800 }]
+              translateY: [ {value: -25, duration: 1000, easing: 'easeOutQuint' } ],
+              opacity: [{ value: 1, duration: 1000 }],
+              scale: [{value: 1.3, duration: 90, easing: 'easeOutElastic' }, {value: 1, duration: 810, easing: 'easeOutElastic' }],
             }">{{ key + '&nbsp;' }}
           </vue-anime>
         </h1>
         <h2>
           <vue-anime v-for="(key, index) in words(sentence2)"
-            :delay="200"
+            :duration="800"
+            offset="-=600"
             :key="'key' + index"
-            class="opacity-0 inline-block font-sans font-montserrat font-extrabold text-2xl"
+            class="opacity-0 inline-block font-sans font-montserrat font-extrabold text-2xl mt-8"
             autoplay="true"
-            :duration="300"
-            offset="-=700"
             :animate="{
-              translateY: [ {value: -5, duration: 700, easing: 'easeOutElastic' } ],
+              translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
               opacity: [{ value: 1, duration: 800 }]
             }">{{ key + '&nbsp;' }}
           </vue-anime>
@@ -68,8 +77,8 @@ export default {
   },
   data() {
     return {
-      sentence1: ',,,,,Wij ,maken ,webapplicaties ,op maat',
-      sentence2: ',,met bewezen ,moderne ,technologie',
+      sentence1: 'Wij,maken,webapplicaties,op maat',
+      sentence2: 'met,bewezen,moderne,technologie,',
       seek: null
     };
   },
