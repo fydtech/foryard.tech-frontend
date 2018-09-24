@@ -1,0 +1,56 @@
+@variants hover, focus, active, responsive {
+  .vertical-bounce {
+    animation: bounce 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  .bounce-stop {
+    animation-iteration-count: 1;
+  }
+  .move-fast {
+    transition: all 0.1s;
+  }
+  .move-u-5 {
+    transform: translateY(-5px);
+  }
+  .move-d-5 {
+    transform: translateY(5px);
+  }
+  .move-l-5 {
+    transform: translateX(-5px);
+  }
+  .move-r-5 {
+    transform: translateX(5px);
+  }
+}
+
+@variants responsive {
+  .rotate-15 {
+    transform: rotate(15deg);
+  }
+  .rotate-15-scale-95 {
+    transform: rotate(15deg) scale(0.95);
+  }
+}
+
+@keyframes bounce {
+  from {
+    padding-top: 0;
+  }
+  to {
+    padding-top: 1rem;
+  }
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+.object-cover {
+  object-fit: cover;
+}
+.clip-circle {
+  clip-path: circle();
+}
+.mix-luminosity {
+  mix-blend-mode: luminosity;
+}
