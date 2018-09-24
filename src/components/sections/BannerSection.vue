@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="flex flex-col relative pb-16">
+  <div id="banner" class="flex flex-col relative py-24 pl-10">
     <div class="flex-1 text-left m-8">
       <vue-anime-time-line>
         <h1>
@@ -51,7 +51,28 @@
     </div>
     <div class="flex text-center">
       <div class="flex-1">
-        <img src="@/assets/img/chevron-down.svg" />
+        <a
+          v-scroll-to="'#products'"
+          href="#">
+          <vue-anime
+            :animate="{
+              translateY: [{
+                value: 10,
+                duration: 1000,
+                easing: 'easeInQuad'
+              },
+              {
+                value: 0,
+                duration: 1000,
+                easing: 'easeOutQuad'
+              }]
+            }"
+            :loop="true">
+            <img
+              class="p-4"
+              src="@/assets/img/chevron-down.svg" />
+          </vue-anime>
+        </a>
       </div>
     </div>
   </div>
@@ -84,7 +105,7 @@ export default {
 </script>
 
 <style>
-#header {
+#banner {
   background: linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9)), url("~@/assets/img/header-bg.jpg");
   background-size: cover;
 }
