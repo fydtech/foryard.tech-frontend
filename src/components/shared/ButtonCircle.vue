@@ -5,7 +5,7 @@
       @mousedown.native="changeMouse"
       @mouseup.native="changeMouse" >
       <button
-        :class="[mouseDown ? 'move-d-1 shadow-green' : '']"
+        :class="buttonClasses"
         class="text-white bg-caribbean-green h-10 w-10 rounded-full shadow-green move-fast shadow-green focus:outline-none flex items-center justify-center">
         <img
           v-if="direction === 'left'"
@@ -47,6 +47,18 @@ export default {
     };
   },
 
+  computed: {
+    buttonClasses () {
+      let classes = ''
+
+      if (this.mouseDown) classes += 'move-d-1 shadow-green '
+      if (this.direction === 'left') classes += 'md:hover:move-l-5'
+      if (this.direction === 'right') classes += 'md:hover:move-r-5'
+
+      return classes
+    }
+  },
+
   methods: {
     changeMouse() {
       this.mouseDown = !this.mouseDown
@@ -55,5 +67,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>
