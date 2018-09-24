@@ -22,7 +22,7 @@
           <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
           <div class="flex flex-none mb-16 mt-4">
             <button-circle direction="left" @click.native="prevCase()" class="mr-3" />
-            <button-circle direction="right" @click.native="nextCase()" buttonLabel="Volgende case" />
+            <button-circle direction="right" @click.native="nextCase()" buttonLabel="Volgende case" role="button" />
           </div>
       </div>
     </div>
