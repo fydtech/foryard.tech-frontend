@@ -5,9 +5,9 @@
         <h1 class="uppercase text-white py-12 tracking-wide text-4xl">Cases</h1>
       </div>
       <div class="flex flex-wrap w-full md:justify-center">
-        <div class="flex mx-8 mb-4" v-for="(item, index) in cases" :key="'case'+index">
-          <a href="" @click.prevent="selectedCase = index">
-            <h2 class="uppercase text-white font-light tracking-wide text-lg md:text-2xl py-2" v-text="item.name"></h2>
+        <div class="flex mx-8" v-for="(item, index) in cases" :key="'case'+index">
+          <a href="" @click.prevent="selectedCase = index" :class="{ 'border-b-2 border-caribbean-green' : selectedCase === index }">
+            <h2 class="uppercase text-white font-light tracking-wide text-lg md:text-2xl pt-2 pb-4" v-text="item.name"></h2>
           </a>
         </div>
       </div>
