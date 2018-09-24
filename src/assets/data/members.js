@@ -31,7 +31,7 @@ export const members = [
   },
   {
     image: "https://randomuser.me/api/portraits/men/66.jpg",
-    name: "Arie Visser",
+    name: "Sander de Vos",
     role: "Backend Developer",
     expertise: "Security & DevOps",
   }
