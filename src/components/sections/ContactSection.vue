@@ -3,7 +3,7 @@
     id="contact"
     class="flex flex-col bg-green pt-10 pl-10">
     <div class="flex-1">
-      <h1>Let's grab a coffee</h1>
+      <h1 class="text-3xl lg:text-4xl">Let's grab a coffee</h1>
     </div>
     <div class="flex-1 ml-8 py-4">
       <p>Why on earth would we grab a coffee?</p>
