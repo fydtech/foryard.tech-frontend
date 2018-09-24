@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col lg:flex-row bg-white px-20">
+  <div class="flex flex-col lg:flex-row bg-white lg:h-20 px-20">
     <div class="flex">
       <div class="flex">
-        <img class="h-14 my-2" src="@/assets/img/foryard-logo-tech.svg">
+        <img class="my-2" src="@/assets/img/foryard-logo-tech.svg">
       </div>
     </div>
     <div class="flex flex-grow items-center lg:justify-end">
