@@ -48,6 +48,7 @@ let colors = {
   'faded-lime': '#8bf17f',
   'shark': '#383838',
   'tangaroa': '#202d3a',
+  'tangaroa-darker': '#161f29',
   'white-lilac': '#e8e8e8',
   'royal-heath': '#af4775',
   'black-dark': '#1a242f',
@@ -541,13 +542,15 @@ module.exports = {
     '10': '2.5rem',
     '12': '3rem',
     '16': '4rem',
+    '20': '5rem',
     '24': '6rem',
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
     '96': '24rem',
     'full': '100%',
-    'screen': '100vh'
+    'screen': '100vh',
+    'banner': 'calc(100vh - 5rem)'
   },
 
 
@@ -620,6 +623,9 @@ module.exports = {
     '5xl': '100rem',
     'full': '100%',
     '650': '650px',
+    '1/3': '33%',
+    '2/5': '40%',
+    '1/2': '50%'
   },
 
 
