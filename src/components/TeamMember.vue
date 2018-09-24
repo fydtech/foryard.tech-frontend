@@ -5,14 +5,14 @@
         class="rounded-full w-24 h-24"
         :src="image">
     </div>
-    <div class="flex flex-col">
-      <div class="flex text-caribbean-green text-bold uppercase">
+    <div class="flex flex-col w-48">
+      <div class="flex text-caribbean-green text-bold uppercase text-left">
         {{ name }}
       </div>
-      <div class="flex italic">
+      <div class="flex italic text-left">
         {{ role }}
       </div>
-      <div class="flex text-grey">
+      <div class="flex text-grey text-left">
         {{ expertise }}
       </div>
     </div>

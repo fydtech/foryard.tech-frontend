@@ -2,7 +2,7 @@
   <div v-if="cases" id="cases">
     <div class="flex flex-wrap bg-black-dark">
       <div class="flex w-full justify-center">
-        <h1 class="uppercase text-white py-12 tracking-wide text-4xl">Cases</h1>
+        <h1 class="uppercase text-white py-12 tracking-wide text-3xl lg:text-4xl">Cases</h1>
       </div>
       <div class="flex flex-wrap w-full md:justify-center">
         <div class="flex mt-2 md:mt-0 mx-4 lg:mx-6" v-for="(item, index) in cases" :key="'case'+index">
@@ -22,7 +22,7 @@
           <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
           <div class="flex flex-none mb-16 mt-4">
             <button-circle direction="left" @click.native="prevCase()" class="mr-3" />
-            <button-circle direction="right" @click.native="nextCase()" buttonLabel="Volgende case" />
+            <button-circle direction="right" @click.native="nextCase()" buttonLabel="Volgende case" role="button" />
           </div>
       </div>
     </div>
