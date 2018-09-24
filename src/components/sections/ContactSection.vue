@@ -15,24 +15,21 @@
           <a class="py-2 ml-6 text-white no-underline" href="mailto:dev@foryard.tech" rel="noreferrer nofollow">dev@foryard.tech</a>
         </div>
         <div class="flex items-center">
-          <img src="@/assets/img/location.svg" alt="location_icon">
+          <img class="self-start sm:self-auto pt-2 sm:pt-0" src="@/assets/img/location.svg" alt="location_icon">
           <a class="py-2 ml-6 text-white no-underline" href="https://goo.gl/maps/HpXX6YLcJtM2" rel="noreferrer nofollow">Kuipersstraat 35, 1074 EE Amsterdam</a>
         </div>
       </div>
     </div>
     <div id="footer" class="bg-tangaroa-darker">
       <div class="container mx-auto h-20 flex justify-center lg:justify-start items-center text-white">
-        <div class="mx-4 lg:mr-4">
-          Foryard
+        <div class="mx-4 lg:mr-4 flex items-center">
+          <img src="@/assets/img/github.svg" alt="github_icon">
+          <a class="py-2 ml-2 text-white no-underline" href="https://github.com/fydtech" rel="noreferrer nofollow">fydtech</a>
+
         </div>
-        <div class="mx-4">
-          KvK
-        </div>
-        <div class="mx-4">
-          BTW
-        </div>
-        <div class="mx-4">
-          Privacy
+        <div class="mx-4 lg:mr-4 flex items-center">
+          <img src="@/assets/img/twitter.svg" alt="twitter_icon">
+          <a class="py-2 ml-2 text-white no-underline" href="https://twitter.com/fydtech" rel="noreferrer nofollow">@fydtech</a>
         </div>
       </div>
     </div>
