@@ -8,22 +8,25 @@
     <div class="flex flex-grow items-center lg:justify-end">
       <div class="flex mr-4 uppercase">
         <a
+          v-scroll-to="'#cases'"
           class="no-underline text-black tracking-wide"
-          href="#cases">
+          href="#">
           Cases
         </a>
       </div>
       <div class="flex mx-4 uppercase">
         <a
+          v-scroll-to="'#team'"
           class="no-underline text-black tracking-wide"
-          href="#team">
+          href="#">
           Team
         </a>
       </div>
       <div class="flex mx-4 uppercase">
         <a
+          v-scroll-to="'#contact'"
           class="no-underline text-black tracking-wide"
-          href="#contact">
+          href="#">
           Contact
         </a>
     </div>
