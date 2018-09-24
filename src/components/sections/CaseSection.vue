@@ -5,9 +5,9 @@
         <h1 class="uppercase text-white py-12 tracking-wide text-4xl">Cases</h1>
       </div>
       <div class="flex flex-wrap w-full md:justify-center">
-        <div class="flex mx-8" v-for="(item, index) in cases" :key="'case'+index">
-          <a href="" @click.prevent="selectedCase = index" class="hover:border-b-2 hover:border-caribbean-green" :class="{ 'border-b-2 border-caribbean-green' : selectedCase === index }">
-            <h2 class="uppercase text-white font-light tracking-wide text-lg md:text-2xl pt-2 pb-4" v-text="item.name"></h2>
+        <div class="flex mt-2 md:mt-0 mx-4 lg:mx-6" v-for="(item, index) in cases" :key="'case'+index">
+          <a href="" @click.prevent="selectedCase = index" class="border-b-2 hover:border-caribbean-green" :class="getBorderColor(index)">
+            <h2 class="uppercase text-white font-light tracking-wide text-lg md:text-xl lg:text-2xl py-2 md:pb-4" v-text="item.name"></h2>
           </a>
         </div>
       </div>
@@ -66,6 +66,10 @@ export default {
       }
 
       this.selectedCase = this.cases.length - 1
+    },
+
+    getBorderColor (index) {
+      return this.selectedCase === index ? 'border-caribbean-green' : 'border-transparent'
     }
   }
 }
