@@ -5,7 +5,7 @@
         <h1>
           <vue-anime
             :duration="1100"
-            class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green"
+            class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green md:text-4xl lg:text-5xl"
             autoplay="true"
             :animate="{
               translateY: [ {value: -25, duration: 1000, easing: 'easeOutQuint' }],
@@ -16,7 +16,7 @@
           <vue-anime v-for="(key, index) in words(sentence1).slice(1)"
             :duration="1000"
             :key="'key' + index"
-            class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green"
+            class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green md:text-4xl lg:text-5xl"
             autoplay="true"
             offset="-=500"
             :animate="{
@@ -26,12 +26,12 @@
             }">{{ key + '&nbsp;' }}
           </vue-anime>
         </h1>
-        <h2>
+        <h2 class="mt-6 leading-none">
           <vue-anime v-for="(key, index) in words(sentence2)"
             :duration="800"
             offset="-=600"
             :key="'key' + index"
-            class="opacity-0 inline-block font-sans font-hind font-normal text-white text-2xl mt-6"
+            class="opacity-0 inline-block font-sans font-hind font-normal text-white text-xl md:text-2xl lg:text-3xl"
             autoplay="true"
             :animate="{
               translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
@@ -93,8 +93,9 @@ export default {
   data() {
     return {
       sentence1: 'Wij maken webapplicaties',
-      sentence2: 'met bewezen moderne technologie'
-    };
+      sentence2: 'met bewezen moderne technologie',
+      vueHovered: false
+    }
   },
   methods: {
     words(sentence) {
@@ -109,4 +110,6 @@ export default {
   background: linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9)), url("~@/assets/img/header-bg.jpg");
   background-size: cover;
 }
+
+
 </style>
