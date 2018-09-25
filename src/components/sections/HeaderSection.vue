@@ -1,11 +1,9 @@
 <template>
-  <div class="flex flex-col lg:flex-row bg-white px-20">
-    <div class="flex">
-      <div class="flex">
-        <img class="h-14 my-4" src="@/assets/img/foryard-logo-tech.svg">
-      </div>
+  <div class="flex flex-col sm:flex-row bg-white sm:px-10 lg:px-20">
+    <div class="flex justify-center sm:justify-start">
+      <img class="h-8 md:h-12 my-4" src="@/assets/img/foryard-logo-tech.svg">
     </div>
-    <div class="flex flex-grow items-center lg:justify-end mb-4 lg:mb-0">
+    <div class="flex flex-grow items-center justify-center sm:justify-end mb-4 sm:mb-0">
       <div class="flex mr-4 uppercase">
         <a
           v-scroll-to="{
