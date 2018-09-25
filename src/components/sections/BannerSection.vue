@@ -106,13 +106,10 @@
 
 <script>
 import Vue from 'vue'
-import VueProgressiveImage from 'vue-progressive-image'
 import headerBg from '@/assets/img/header-bg.jpg'
 import { VueAnime } from 'vue-anime'
 import { VueAnimeGroup } from 'vue-anime'
 import { VueAnimeTimeLine } from 'vue-anime'
-
-Vue.use(VueProgressiveImage);
 
 export default {
   name: 'BannerSection',
