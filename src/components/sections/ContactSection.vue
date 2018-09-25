@@ -3,7 +3,7 @@
     id="contact"
     class="bg-tangaroa">
     <div class="container mx-auto flex flex-col justify-between h-banner py-16 px-4">
-      <h1 class="uppercase md:text-4xl lg:text-5xl text-caribbean-green leading-none">Zin in koffie?</h1>
+      <h1 class="uppercase text-3xl lg:text-4xl text-caribbean-green leading-none">Zin in koffie?</h1>
       <p class="text-white text-lg w-full lg:w-1/2 leading-loose">Wij ook! Een goede kop koffie (of thee) is bij uitstek een prettige situatie om jouw vraag te bespreken. Laten we samen kijken naar de mogelijkheden en het realiseren van het juiste stukje software voor jouw organisatie.</p>
       <div class="ml-24 text-white text-lg">
         <div class="flex items-center">
