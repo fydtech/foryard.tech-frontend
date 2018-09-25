@@ -1,14 +1,15 @@
 <template>
   <div>
-    <progressive-background
+    <div
       id="banner"
-      class="flex flex-col relative py-24 pl-10 h-banner"
-      :src="headerBg">
+      :class="'relative flex flex-col relative py-16 h-banner min-h-500'"
+      style="background-size: cover; "
+        :style="{ background: headerBgReady }">
       <div
-        slot="content"
-        slot-scope="{ visible }"
-        class="flex-1 text-left m-8 h-banner">
-        <vue-anime-time-line>
+        class="flex-1 text-left p-4 md:p-8">
+        <vue-anime-time-line
+          ref="intro"
+          :playing="playing">
           <h1>
             <vue-anime
               :duration="1100"
@@ -72,7 +73,7 @@
               src="@/assets/img/vue.svg">
           </div>
         </div>
-        <div class="flex text-center mt-10 md:mt-0">
+        <div class="flex text-center mt-10 md:mt-32">
           <div class="flex-1">
             <a
               v-scroll-to="'#products'"
@@ -99,7 +100,7 @@
           </div>
         </div>
       </div>
-    </progressive-background>
+    </div>
   </div>
 </template>
 
@@ -123,6 +124,7 @@ export default {
   data() {
     return {
       headerBg,
+      headerBgReady: "linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9))",
       playing: false,
       sentence1: "Wij maken webapplicaties",
       sentence2: "met bewezen moderne technologie",
@@ -131,24 +133,28 @@ export default {
     };
   },
   mounted() {
-    setTimeout(() => {
-      this.$refs["intro"].play()
-    }, 1000);
-    setTimeout(() => {
-      this.laravelLogoHover = true;
-    }, 2500);
+    let loadedImage = new Image();
+    loadedImage.src = this.headerBg;
+    this.waitForImageToLoad(loadedImage)
+    .then(() => {
+      this.headerBgReady = `linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9)), url(${headerBg})`;
+      this.playing = true;
+      setTimeout(() => {
+        this.laravelLogoHover = true;
+      }, 2500);
 
-    setTimeout(() => {
-      this.laravelLogoHover = false;
-    }, 2700);
+      setTimeout(() => {
+        this.laravelLogoHover = false;
+      }, 2700);
 
-    setTimeout(() => {
-      this.vueLogoHover = true;
-    }, 2900);
+      setTimeout(() => {
+        this.vueLogoHover = true;
+      }, 2900);
 
-    setTimeout(() => {
-      this.vueLogoHover = false;
-    }, 3100);
+      setTimeout(() => {
+        this.vueLogoHover = false;
+      }, 3100);
+    })
   },
   methods: {
     words(sentence) {
@@ -162,10 +168,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#banner {
-  background: linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9));
-  background-size: cover;
-}
-</style>
