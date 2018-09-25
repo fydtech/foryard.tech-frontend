@@ -6,7 +6,7 @@
       </div>
       <div class="flex flex-wrap w-full md:justify-center">
         <div class="flex mt-2 md:mt-0 mx-4 lg:mx-6" v-for="(item, index) in cases" :key="'case'+index">
-          <a href="" @click.prevent="selectedCase = index" class="border-b-2 hover:border-caribbean-green" :class="getBorderColor(index)">
+          <a href="" @click.prevent="selectedCase = index" class="border-b-2 hover:border-tag-grey" :class="getBorderColor(index)">
             <h2 class="uppercase text-white font-light tracking-wide text-lg md:text-xl lg:text-2xl py-2 md:pb-4" v-text="item.name"></h2>
           </a>
         </div>
@@ -19,11 +19,11 @@
         <img class="hidden md:block h-96 max-w-none absolute" :src="cases[selectedCase].screenshot" alt="Buitenlandportaal_screen" />
       </div>
       <div class="flex flex-col w-full md:w-1/2 pt-12 md:pt-24 px-8 md:px-0">
-          <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
-          <div class="flex flex-none mb-16 mt-4">
-            <button-circle direction="left" @click.native="prevCase()" class="mr-3" />
-            <button-circle direction="right" @click.native="nextCase()" buttonLabel="Volgende case" />
-          </div>
+        <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
+        <div class="flex flex-none mb-16 mt-4">
+          <button-circle direction="left" @click.native="prevCase()" class="mr-3" @mouseenter.native="showPrevCaseHover = true" @mouseleave.native="showPrevCaseHover = false" />
+          <button-circle direction="right" @click.native="nextCase()" @mouseenter.native="showNextCaseHover = true" @mouseleave.native="showNextCaseHover = false" buttonLabel="Volgende case" role="button" />
+        </div>
       </div>
     </div>
   </div>
@@ -45,31 +45,50 @@ export default {
   data() {
     return {
       cases: cases,
-      selectedCase: 0
+      selectedCase: 0,
+      showPrevCaseHover: false,
+      showNextCaseHover: false
+    }
+  },
+
+  computed: {
+    hoveredNextCase () {
+      return this.getNextCase()
+    },
+
+    hoveredPrevCase () {
+      return this.getPrevCase()
     }
   },
 
   methods: {
-    nextCase () {
-      if (this.selectedCase < this.cases.length - 1) {
-        this.selectedCase++
-        return
-      }
-
-      this.selectedCase = 0
+    nextCase (caseType) {
+      this.selectedCase = this.getNextCase()
     },
 
-    prevCase () {
-      if (this.selectedCase > 0) {
-        this.selectedCase--
-        return
-      }
+    prevCase (caseType) {
+      this.selectedCase = this.getPrevCase()
+    },
 
-      this.selectedCase = this.cases.length - 1
+    getNextCase () {
+      if (this.selectedCase < this.cases.length - 1) {
+        return this.selectedCase + 1
+      }
+      return 0
+    },
+
+    getPrevCase () {
+      if (this.selectedCase > 0) {
+        return this.selectedCase - 1
+      }
+      return this.cases.length - 1
     },
 
     getBorderColor (index) {
-      return this.selectedCase === index ? 'border-caribbean-green' : 'border-transparent'
+      if (this.selectedCase === index) return 'border-caribbean-green'
+      if (this.showPrevCaseHover && this.hoveredPrevCase === index) return 'border-tag-grey'
+      if (this.showNextCaseHover && this.hoveredNextCase === index) return 'border-tag-grey'
+      return 'border-transparent'
     }
   }
 }
