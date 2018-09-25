@@ -52,8 +52,8 @@ export default {
       let classes = ''
 
       if (this.mouseDown) classes += 'move-d-1 shadow-green '
-      if (this.direction === 'left') classes += 'md:hover:move-l-5'
-      if (this.direction === 'right') classes += 'md:hover:move-r-5'
+      if (this.direction === 'left') classes += 'md:hover:move-l-2'
+      if (this.direction === 'right') classes += 'md:hover:move-r-2'
 
       return classes
     }
@@ -66,6 +66,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-</style>
