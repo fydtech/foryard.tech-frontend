@@ -141,7 +141,7 @@ export default {
 
 <style>
 #banner {
-  background: linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9)), url("~@/assets/img/header-bg.jpg");
+  background: linear-gradient(rgba(26, 36, 47, 0.8), rgba(26, 36, 47, 0.8)), url("~@/assets/img/header-bg.jpg");
   background-size: cover;
 }
 
