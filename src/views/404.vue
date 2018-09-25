@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="flex flex-wrap">
-      <div class="flex w-full justify-center">
+      <div class="w-full text-center">
         <h1 class="uppercase text-white py-12 tracking-wide text-4xl">404</h1>
       </div>
       <div class="w-full text-white text-center">
