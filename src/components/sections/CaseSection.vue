@@ -1,6 +1,6 @@
 <template>
   <div v-if="cases" id="cases">
-    <div class="flex flex-wrap bg-black-dark">
+    <div class="flex flex-wrap bg-black-dark pt-12">
       <div class="flex w-full justify-center">
         <h1 class="uppercase text-white py-12 tracking-wide text-3xl lg:text-4xl">Cases</h1>
       </div>

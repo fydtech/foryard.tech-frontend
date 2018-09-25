@@ -1,9 +1,9 @@
 <template>
   <div
     id="team"
-    class="flex flex-col my-20 text-center">
+    class="flex flex-col mt-12 mb-24 text-center">
     <div class="flex-1">
-      <h1 class="uppercase tracking-wide text-3xl lg:text-4xl">Team</h1>
+      <h1 class="uppercase tracking-wide text-3xl lg:text-4xl py-12">Team</h1>
     </div>
     <div class="flex flex-wrap">
       <div
