@@ -1,36 +1,43 @@
+import arie from "@/assets/img/arie.jpg";
+import jaap from "@/assets/img/jaap.png";
+import ivo from "@/assets/img/ivo.jpg";
+import gerwin from "@/assets/img/gerwin.jpg";
+import nathan from "@/assets/img/nathan.png";
+import sander from "@/assets/img/sander.jpg";
+
 export const members = [
   {
-    image: "https://randomuser.me/api/portraits/men/6.jpg",
+    image: arie,
     name: "Arie Visser",
     role: "Full Stack Developer",
     expertise: "Laravel, Vue.js & Node.js",
   },
   {
-    image: "https://randomuser.me/api/portraits/men/7.jpg",
+    image: gerwin,
     name: "Gerwin Overeem",
     role: "Frontend Developer",
     expertise: "Vue.js Guru",
   },
   {
-    image: "https://randomuser.me/api/portraits/men/8.jpg",
+    image: ivo,
     name: "Ivo Jonkers",
     role: "Project Manager",
     expertise: "Blockchain Researcher",
   },
   {
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
+    image: jaap,
     name: "Jaap vd Voort",
     role: "Graphic Designer",
     expertise: "UX Designer",
   },
   {
-    image: "https://randomuser.me/api/portraits/men/64.jpg",
+    image: nathan,
     name: "Nathan Alder",
     role: "Frontend Developer",
     expertise: "Animation Master"
   },
   {
-    image: "https://randomuser.me/api/portraits/men/66.jpg",
+    image: sander,
     name: "Sander de Vos",
     role: "Backend Developer",
     expertise: "Security & DevOps",
