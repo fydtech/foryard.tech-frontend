@@ -7,9 +7,11 @@
     </div>
     <div class="flex flex-wrap">
       <div
-        v-for="member in members"
+        v-for="(member, index) in members"
+        :key="'member' + index"
         class="flex lg:w-1/2 xl:w-1/3 flex-grow justify-center">
         <team-member
+          :key="'member' + index"
           :image="member.image"
           :name="member.name"
           :role="member.role"
