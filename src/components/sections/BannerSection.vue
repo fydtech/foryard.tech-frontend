@@ -1,5 +1,5 @@
 <template>
-  <div id="banner" class="flex flex-col relative py-24 pl-10">
+  <div id="banner" class="flex flex-col relative pb-16 h-banner">
     <div class="flex-1 text-left m-8">
       <vue-anime-time-line>
         <h1>
