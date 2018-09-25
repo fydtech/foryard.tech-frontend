@@ -6,7 +6,7 @@
         :src="image">
     </div>
     <div class="flex flex-col w-48">
-      <div class="flex text-caribbean-green text-bold uppercase text-left">
+      <div class="flex text-caribbean-green font-extrabold uppercase text-left">
         {{ name }}
       </div>
       <div class="flex italic text-left">
