@@ -1,6 +1,6 @@
 <template>
   <div id="banner" class="flex flex-col relative py-24 pl-10">
-    <div class="flex-1 text-left m-8">
+    <div class="flex-1 text-center md:text-left m-8">
       <vue-anime-time-line>
         <h1>
           <vue-anime
@@ -41,15 +41,31 @@
         </h2>
       </vue-anime-time-line>
     </div>
-    <div class="flex flex-row m-10">
-      <div class="flex mr-10">
-        <img src="@/assets/img/laravel.svg">
+    <div class="flex flex-row m-10 justify-center md:justify-start">
+      <div
+        @mouseenter="laravelLogoHover = true"
+        @mouseleave="laravelLogoHover = false"
+        class="flex mr-10">
+        <img
+          v-if="laravelLogoHover"
+          src="@/assets/img/laravel-hover.svg">
+        <img
+          v-else
+          src="@/assets/img/laravel.svg">
       </div>
-      <div class="flex">
-        <img src="@/assets/img/vue.svg">
+      <div
+        @mouseenter="vueLogoHover = true"
+        @mouseleave="vueLogoHover = false"
+        class="flex">
+        <img
+          v-if="vueLogoHover"
+          src="@/assets/img/vue-hover.svg">
+        <img
+          v-else
+          src="@/assets/img/vue.svg">
       </div>
     </div>
-    <div class="flex text-center">
+    <div class="flex text-center mt-10 md:mt-0">
       <div class="flex-1">
         <a
           v-scroll-to="'#products'"
@@ -92,9 +108,28 @@ export default {
   },
   data() {
     return {
-      sentence1: 'Wij maken webapplicaties',
-      sentence2: 'met bewezen moderne technologie'
+      sentence1: "Wij maken webapplicaties",
+      sentence2: "met bewezen moderne technologie",
+      laravelLogoHover: false,
+      vueLogoHover: false
     };
+  },
+  mounted: function() {
+    setTimeout(() => {
+      this.laravelLogoHover = true;
+    }, 2500);
+
+    setTimeout(() => {
+      this.laravelLogoHover = false;
+    }, 2700);
+
+    setTimeout(() => {
+      this.vueLogoHover = true;
+    }, 2900);
+
+    setTimeout(() => {
+      this.vueLogoHover = false;
+    }, 3100);
   },
   methods: {
     words(sentence) {

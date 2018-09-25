@@ -5,7 +5,7 @@
         <img class="h-14 my-4" src="@/assets/img/foryard-logo-tech.svg">
       </div>
     </div>
-    <div class="flex flex-grow items-center lg:justify-end">
+    <div class="flex flex-grow items-center lg:justify-end mb-4 lg:mb-0">
       <div class="flex mr-4 uppercase">
         <a
           v-scroll-to="{
