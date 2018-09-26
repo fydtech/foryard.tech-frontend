@@ -29,4 +29,10 @@
   .scale-x-100 {
     transform: scaleX(1);
   }
+  .rotate-15 {
+    transform: rotate(15deg);
+  }
+  .rotate--15 {
+    transform: rotate(-15deg);
+  }
 }
