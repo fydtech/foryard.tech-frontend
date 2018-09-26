@@ -60,12 +60,13 @@
             class="opacity-0 scale-0">
             <div class="flex items-center">
               <div
-                @mouseenter="laravelLogoHover = true"
+                @mouseenter="laravelLogoHover = true; laravelVibrate = false"
+                @mouseleave="laravelLogoHover = false"
                 class="flex cursor-pointer transition-all-15 md:hover:scale-110">
                 <vue-anime
                   :delay="3000"
                   :autoplay="true"
-                  :playing="!laravelLogoHover"
+                  :playing="laravelVibrate"
                   :loop="true"
                   :animate="{
                     translateX: [
@@ -94,11 +95,12 @@
             </div>
             <div class="flex items-center">
               <div
-                @mouseenter="vueLogoHover = true"
+                @mouseenter="vueLogoHover = true; vueVibrate = false"
+                @mouseleave="vueLogoHover = false"
                 class="flex cursor-pointer transition-all-15 md:hover:scale-110">
                 <vue-anime
                   :delay="3000"
-                  :playing="!vueLogoHover"
+                  :playing="vueVibrate"
                   :autoplay="true"
                   :loop="true"
                   :animate="{
@@ -178,7 +180,9 @@ export default {
       sentence1: "Wij maken webapplicaties",
       sentence2: "met bewezen moderne technologie",
       laravelLogoHover: false,
-      vueLogoHover: false
+      vueLogoHover: false,
+      laravelVibrate: true,
+      vueVibrate: true
     };
   },
   mounted() {
