@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-grow flex-col">
+  <div class="flex flex-col">
     <div class="flex m-2">
       <h1 class="uppercase text-caribbean-green text-xl md:text-2xl" v-text="name"></h1>
     </div>
