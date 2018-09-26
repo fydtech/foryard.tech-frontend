@@ -4,7 +4,7 @@
     class="bg-tangaroa">
     <div class="flex flex-wrap container mx-auto">
       <div class="min-h-600 md:min-h-500 px-10 py-24 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
-        <div class="flex flex-col justify-between min-h-400">
+        <div class="flex flex-col justify-between min-h-500">
           <h1 class="uppercase text-3xl lg:text-4xl text-caribbean-green leading-none">Zin in koffie?</h1>
           <p class="text-white text-lg leading-loose">Wij ook! Een goede kop koffie (of thee) is bij uitstek een prettige situatie om jouw vraag te bespreken. Laten we samen kijken naar de mogelijkheden en het realiseren van het juiste stukje software voor jouw organisatie.</p>
           <div class="ml-12 md:ml-24 text-white text-lg">
