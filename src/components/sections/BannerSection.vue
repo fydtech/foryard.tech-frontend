@@ -58,12 +58,13 @@
               opacity: [{ value: 1, duration: 800 }]
             }"
             class="opacity-0 scale-0">
-            <div class="flex items-center">
+            <div class="flex items-center justify-center md:justify-start">
               <div
                 @mouseenter="laravelLogoHover = true; laravelVibrate = false"
                 @mouseleave="laravelLogoHover = false"
-                class="flex cursor-pointer transition-all-15 md:hover:scale-110">
+                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110">
                 <vue-anime
+                  class="flex items-center"
                   :delay="3000"
                   :autoplay="true"
                   :playing="laravelVibrate"
@@ -93,12 +94,13 @@
                 </span>
               </div>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center justify-center md:justify-start">
               <div
                 @mouseenter="vueLogoHover = true; vueVibrate = false"
                 @mouseleave="vueLogoHover = false"
-                class="flex cursor-pointer transition-all-15 md:hover:scale-110">
+                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110">
                 <vue-anime
+                  class="flex items-center"
                   :delay="3000"
                   :playing="vueVibrate"
                   :autoplay="true"
