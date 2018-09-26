@@ -66,24 +66,19 @@
                 :class="{'scale-80': laravelVibrate === false}">
                 <vue-anime
                   class="flex items-center"
-                  :delay="6000"
+                  :delay="4000"
                   :autoplay="true"
                   :playing="laravelVibrate"
                   :loop="true"
                   :animate="{
-                    translateY: [
-                    {value: 3, duration: 80},
-                    {value: -3, duration: 80},
-                    {value: 2, duration: 80},
-                    {value: -2, duration: 80},
-                    {value: 1, duration: 80},
-                    {value: -1, duration: 80},
-                    {value: 1, duration: 80},
-                    {value: -1, duration: 80},
-                    {value: 1, duration: 80},
-                    {value: -1, duration: 80},
+                    translateX: [
                     {value: 0, duration: 100},
-                    {value: 0, duration: 1800}]
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: 0, duration: 100}]
                   }">
                   <img
                     class="w-16 h-16 mr-4 my-6"
@@ -107,25 +102,18 @@
                   :class="{'scale-80': vueVibrate === false}">
                 <vue-anime
                   class="flex items-center"
-                  :delay="6000"
+                  :delay="4000"
                   :playing="vueVibrate"
                   :autoplay="true"
                   :loop="true"
                   :animate="{
                     translateX: [
-                    {value: 0, duration: 1800},
-                    {value: 10, duration: 60},
-                    {value: -10, duration: 60},
-                    {value: 5, duration: 60},
-                    {value: -5, duration: 60},
-                    {value: 3, duration: 60},
-                    {value: -3, duration: 60},
-                    {value: 2, duration: 60},
-                    {value: -2, duration: 60},
-                    {value: 1, duration: 70},
-                    {value: -1, duration: 70},
-                    {value: 1, duration: 100},
-                    {value: -1, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
                     {value: 0, duration: 100}]
                   }">
                   <img
