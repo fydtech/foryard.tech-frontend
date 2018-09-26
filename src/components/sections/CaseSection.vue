@@ -18,8 +18,14 @@
         <img class="hidden md:block h-96 relative z-10 max-w-650" src="@/assets/img/MacBook-Gold.png" alt="MacBook" />
         <img class="hidden md:block h-96 absolute max-w-650" :src="cases[selectedCase].screenshot" alt="Buitenlandportaal_screen" />
       </div>
-      <div class="flex flex-col w-full md:w-1/2 pt-12 md:pt-24 px-8 md:px-0">
-        <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
+      <div class="flex flex-col w-full md:w-1/2 pt-12 md:pt-24 px-8 md:pl-0 md:pr-4">
+        <vue-anime ref="case" class="flex flex-grow" :animate="{
+          translateY: [ {value: -5, duration: 700, easing: 'easeOutQuint' }, {value: 0, duration: 800 }],
+          scale: [{value: 0.85, duration: 100, easing: 'easeOutElastic' }, {value: 1, duration: 900 }],
+        }"
+        :playing="false">
+          <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
+        </vue-anime>
         <div class="flex flex-none mb-16 mt-4">
           <button-circle direction="left" @click.native="prevCase()" class="mr-3" @mouseenter.native="showPrevCaseHover = true" @mouseleave.native="showPrevCaseHover = false" />
           <button-circle direction="right" @click.native="nextCase()" @mouseenter.native="showNextCaseHover = true" @mouseleave.native="showNextCaseHover = false" buttonLabel="Volgende case" role="button" />
@@ -33,13 +39,15 @@
 import { cases } from '@/assets/data/cases'
 import SingleCase from '@/components/SingleCase'
 import ButtonCircle from '@/components/shared/ButtonCircle'
+import { VueAnime } from 'vue-anime'
 
 export default {
   name: 'CaseSection',
 
   components: {
     SingleCase,
-    ButtonCircle
+    ButtonCircle,
+    VueAnime
   },
 
   data() {
@@ -62,12 +70,18 @@ export default {
   },
 
   methods: {
-    nextCase (caseType) {
-      this.selectedCase = this.getNextCase()
+    nextCase () {
+      this.$refs.case.restart()
+      setTimeout(() => {
+        this.selectedCase = this.getNextCase()
+      }, 50)
     },
 
-    prevCase (caseType) {
-      this.selectedCase = this.getPrevCase()
+    prevCase () {
+      this.$refs.case.restart()
+      setTimeout(() => {
+        this.selectedCase = this.getPrevCase()
+      }, 50)
     },
 
     getNextCase () {
