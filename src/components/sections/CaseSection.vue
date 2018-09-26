@@ -6,7 +6,7 @@
       </div>
       <div class="flex flex-wrap w-full md:justify-center">
         <div class="flex mt-2 md:mt-0 mx-4 lg:mx-6" v-for="(item, index) in cases" :key="'case'+index">
-          <a href="" @click.prevent="selectedCase = index" class="border-b-2 hover:border-tag-grey" :class="getBorderColor(index)">
+          <a href="" @click.prevent="selectCase(index)" class="border-b-2 hover:border-tag-grey" :class="getBorderColor(index)">
             <h2 class="uppercase text-white font-light tracking-wide text-lg md:text-xl lg:text-2xl py-2 md:pb-4" v-text="item.name"></h2>
           </a>
         </div>
@@ -81,6 +81,13 @@ export default {
       this.$refs.case.restart()
       setTimeout(() => {
         this.selectedCase = this.getPrevCase()
+      }, 50)
+    },
+
+    selectCase (index) {
+      this.$refs.case.restart()
+      setTimeout(() => {
+        this.selectedCase = index
       }, 50)
     },
 
