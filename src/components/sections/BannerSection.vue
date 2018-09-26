@@ -63,7 +63,7 @@
                 @mouseenter="laravelLogoHover = true"
                 class="flex cursor-pointer transition-all-15 md:hover:scale-110">
                 <vue-anime
-                  :delay="6000"
+                  :delay="3000"
                   :autoplay="true"
                   :playing="!laravelLogoHover"
                   :loop="true"
@@ -97,7 +97,7 @@
                 @mouseenter="vueLogoHover = true"
                 class="flex cursor-pointer transition-all-15 md:hover:scale-110">
                 <vue-anime
-                  :delay="6000"
+                  :delay="3000"
                   :playing="!vueLogoHover"
                   :autoplay="true"
                   :loop="true"
