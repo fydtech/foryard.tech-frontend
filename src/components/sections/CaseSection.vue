@@ -12,15 +12,23 @@
         </div>
       </div>
     </div>
-
     <div class="flex flex-col md:flex-row justify-center bg-black-light">
       <div class="invisible md:visible flex w-1/2 md:my-24 md:pr-16 relative" id="macbook">
         <img class="hidden md:block h-96 relative z-10 max-w-650" src="@/assets/img/MacBook-Gold.png" alt="MacBook" />
         <vue-anime
           ref="screenshot"
           class="hidden md:block absolute"
+          style="clip-path: circle(100% at 50% 50%);"
           :animate="{
-            opacity: [ {value: 0, duration: 0}, {value: 1, duration: 1500, easing: 'easeOutQuint' }],
+            clipPath: [
+              {value: 'circle(5% at 60% 40%)', duration: 200, easing: 'easeOutCubic'},
+              {value: 'circle(71.3% at 50% 50%)', duration: 600, easing: 'easeOutCubic'}
+              ],
+            opacity: [
+              {value: 1, duration: 200},
+              {value: 0, duration: 0},
+              {value: 1, duration: 600}
+            ]
           }">
           <img
             class="h-96  max-w-650"
@@ -28,10 +36,10 @@
             alt="Buitenlandportaal_screen" />
         </vue-anime>
       </div>
-      <div class="flex flex-col w-full md:w-1/2 pt-12 md:pt-24 px-8 md:pl-0 md:pr-4">
+      <div class="flex flex-col w-full md:w-1/2 pt-12 md:pt-24 px-8 md:pl-0 md:pr-4 min-h-600">
         <vue-anime ref="case" class="flex flex-grow" :animate="{
-          translateY: [ {value: -5, duration: 700, easing: 'easeOutQuint' }, {value: 0, duration: 800 }],
-          scale: [{value: 0.85, duration: 100, easing: 'easeOutElastic' }, {value: 1, duration: 900 }],
+          scale: [{value: 0.9, duration: 200, easing: 'easeOutCubic'}, {value: 1, duration: 600, easing: 'easeOutCubic' }],
+          opacity: [{value: 0.3, duration: 200, easing: 'easeOutCubic'}, {value: 1, duration: 600, easing: 'easeOutCubic'}]
         }"
         :playing="false">
           <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
@@ -85,7 +93,7 @@ export default {
       this.$refs.screenshot.restart()
       setTimeout(() => {
         this.selectedCase = this.getNextCase()
-      }, 50)
+      }, 200)
     },
 
     prevCase () {
@@ -93,7 +101,7 @@ export default {
       this.$refs.screenshot.restart()
       setTimeout(() => {
         this.selectedCase = this.getPrevCase()
-      }, 50)
+      }, 200)
     },
 
     selectCase (index) {
@@ -101,7 +109,7 @@ export default {
       this.$refs.screenshot.restart()
       setTimeout(() => {
         this.selectedCase = index
-      }, 50)
+      }, 200)
     },
 
     getNextCase () {
