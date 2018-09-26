@@ -62,23 +62,28 @@
               <div
                 @mouseenter="laravelLogoHover = true; laravelVibrate = false"
                 @mouseleave="laravelLogoHover = false"
-                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110">
+                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110"
+                :class="{'scale-80': laravelVibrate === false}">
                 <vue-anime
                   class="flex items-center"
-                  :delay="3000"
+                  :delay="6000"
                   :autoplay="true"
                   :playing="laravelVibrate"
                   :loop="true"
                   :animate="{
-                    translateX: [
+                    translateY: [
+                    {value: 3, duration: 80},
+                    {value: -3, duration: 80},
+                    {value: 2, duration: 80},
+                    {value: -2, duration: 80},
+                    {value: 1, duration: 80},
+                    {value: -1, duration: 80},
+                    {value: 1, duration: 80},
+                    {value: -1, duration: 80},
+                    {value: 1, duration: 80},
+                    {value: -1, duration: 80},
                     {value: 0, duration: 100},
-                    {value: 2, duration: 100},
-                    {value: -2, duration: 100},
-                    {value: 2, duration: 100},
-                    {value: -2, duration: 100},
-                    {value: 2, duration: 100},
-                    {value: 0, duration: 100},
-                    {value: 0, duration: 2000}]
+                    {value: 0, duration: 1800}]
                   }">
                   <img
                     class="w-16 h-16 mr-4 my-6"
@@ -98,22 +103,29 @@
               <div
                 @mouseenter="vueLogoHover = true; vueVibrate = false"
                 @mouseleave="vueLogoHover = false"
-                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110">
+                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110"
+                  :class="{'scale-80': vueVibrate === false}">
                 <vue-anime
                   class="flex items-center"
-                  :delay="3000"
+                  :delay="6000"
                   :playing="vueVibrate"
                   :autoplay="true"
                   :loop="true"
                   :animate="{
                     translateX: [
-                    {value: 0, duration: 2000},
-                    {value: 2, duration: 100},
-                    {value: -2, duration: 100},
-                    {value: 2, duration: 100},
-                    {value: -2, duration: 100},
-                    {value: 2, duration: 100},
-                    {value: -2, duration: 100},
+                    {value: 0, duration: 1800},
+                    {value: 10, duration: 60},
+                    {value: -10, duration: 60},
+                    {value: 5, duration: 60},
+                    {value: -5, duration: 60},
+                    {value: 3, duration: 60},
+                    {value: -3, duration: 60},
+                    {value: 2, duration: 60},
+                    {value: -2, duration: 60},
+                    {value: 1, duration: 70},
+                    {value: -1, duration: 70},
+                    {value: 1, duration: 100},
+                    {value: -1, duration: 100},
                     {value: 0, duration: 100}]
                   }">
                   <img
