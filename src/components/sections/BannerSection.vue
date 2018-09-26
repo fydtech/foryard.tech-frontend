@@ -1,11 +1,11 @@
 <template>
   <div
     id="banner"
-    :class="'relative flex flex-col relative py-16 h-vh-60 min-h-600'"
+    :class="'relative flex flex-col justify-center relative py-16 h-vh-60 min-h-500'"
     style="background-size: cover; "
       :style="{ background: headerBgReady }">
     <div
-      class="flex-1 text-left p-5 md:p-8">
+      class="text-left p-5 md:p-8 sm:px-10 lg:px-20">
       <vue-anime-time-line
         ref="intro"
         :playing="playing">
@@ -34,7 +34,7 @@
             }">{{ key + '&nbsp;' }}
           </vue-anime>
         </h1>
-        <h2 class="mt-6 leading-none">
+        <h2 class="my-6 leading-none">
           <vue-anime v-for="(key, index) in words(sentence2)"
             :duration="800"
             offset="-=600"
@@ -47,78 +47,88 @@
             }">{{ key + '&nbsp;' }}
           </vue-anime>
         </h2>
-      </vue-anime-time-line>
-      <div
-        class="flex flex-col justify-center md:justify-start">
-        <div class="flex items-center">
-          <div
-            @mouseenter="laravelLogoHover = true"
-            class="flex cursor-pointer transition-all-15 md:hover:scale-110">
-            <vue-anime
-              :delay="6000"
-              :autoplay="true"
-              :playing="!laravelLogoHover"
-              :loop="true"
-              :animate="{
-                translateX: [
-                {value: 0, duration: 100},
-                {value: 1, duration: 100},
-                {value: -2, duration: 100},
-                {value: 1, duration: 100},
-                {value: -2, duration: 100},
-                {value: 1, duration: 100},
-                {value: 0, duration: 100},
-                {value: 0, duration: 3000}]
-              }">
-              <img
-                class="w-16 h-16 mr-4 my-6"
-                src="@/assets/img/laravel-hover.svg">
-            </vue-anime>
-          </div>
-          <div
-            class="bg-tag-grey p-4 rounded items-center flex scale-x-0"
-            :class="{ 'w-48 transition-all-15 scale-x-100': laravelLogoHover }">
-            <span
-              class="font-plex italic text-white text-xs hover:text-caribbean-green">
-              Laravel: The PHP Framework For Web Artisans
-            </span>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <div
-            @mouseenter="vueLogoHover = true"
-            class="flex cursor-pointer transition-all-15 md:hover:scale-110">
-            <vue-anime
-              :delay="6000"
-              :playing="!vueLogoHover"
-              :autoplay="true"
-              :loop="true"
-              :animate="{
-                translateX: [
-                {value: 0, duration: 3000},
-                {value: 1, duration: 100},
-                {value: -2, duration: 100},
-                {value: 1, duration: 100},
-                {value: -2, duration: 100},
-                {value: 1, duration: 100},
-                {value: -1, duration: 100},
-                {value: 0, duration: 100}]
-              }">
-              <img
-                class="w-16 h-16 mr-4 my-6"
-                src="@/assets/img/vue-hover.svg">
-              </vue-anime>
+        <div
+          class="flex flex-col justify-center">
+          <vue-anime
+            :duration="800"
+            offset="+=0"
+            autoplay="true"
+            :animate="{
+              translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
+              opacity: [{ value: 1, duration: 800 }]
+            }"
+            class="opacity-0 scale-0">
+            <div class="flex items-center">
+              <div
+                @mouseenter="laravelLogoHover = true"
+                class="flex cursor-pointer transition-all-15 md:hover:scale-110">
+                <vue-anime
+                  :delay="6000"
+                  :autoplay="true"
+                  :playing="!laravelLogoHover"
+                  :loop="true"
+                  :animate="{
+                    translateX: [
+                    {value: 0, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: 0, duration: 100},
+                    {value: 0, duration: 2000}]
+                  }">
+                  <img
+                    class="w-16 h-16 mr-4 my-6"
+                    src="@/assets/img/laravel-hover.svg">
+                </vue-anime>
+              </div>
+              <div
+                class="bg-tag-grey p-4 rounded items-center flex scale-x-0"
+                :class="{ 'w-48 transition-all-15 scale-x-100': laravelLogoHover }">
+                <span
+                  class="font-plex italic text-white text-xs hover:text-caribbean-green">
+                  Laravel: The PHP Framework For Web Artisans
+                </span>
+              </div>
             </div>
-          <div
-            class="bg-tag-grey p-4 rounded items-center flex scale-x-0"
-            :class="{ 'w-48 transition-all-15 scale-x-100': vueLogoHover }">
-            <span
-              class="font-plex italic text-white text-xs hover:text-caribbean-green">
-              Vue JS: The Progressive JavaScript Framework
-          </span>
-          </div>
+            <div class="flex items-center">
+              <div
+                @mouseenter="vueLogoHover = true"
+                class="flex cursor-pointer transition-all-15 md:hover:scale-110">
+                <vue-anime
+                  :delay="6000"
+                  :playing="!vueLogoHover"
+                  :autoplay="true"
+                  :loop="true"
+                  :animate="{
+                    translateX: [
+                    {value: 0, duration: 2000},
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
+                    {value: 2, duration: 100},
+                    {value: -2, duration: 100},
+                    {value: 0, duration: 100}]
+                  }">
+                  <img
+                    class="w-16 h-16 mr-4 my-6"
+                    src="@/assets/img/vue-hover.svg">
+                  </vue-anime>
+                </div>
+              <div
+                class="bg-tag-grey p-4 rounded items-center flex scale-x-0"
+                :class="{ 'w-48 transition-all-15 scale-x-100': vueLogoHover }">
+                <span
+                  class="font-plex italic text-white text-xs hover:text-caribbean-green">
+                  Vue JS: The Progressive JavaScript Framework
+              </span>
+              </div>
+            </div>
+          </vue-anime>
         </div>
-      </div>
+      </vue-anime-time-line>
     </div>
     <div class="absolute pin-b pin-l text-center w-full mb-6">
       <a
@@ -188,9 +198,6 @@ export default {
       return new Promise(resolve => {
         imageElement.onload = resolve;
       })
-    },
-    random(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
   }
 }
