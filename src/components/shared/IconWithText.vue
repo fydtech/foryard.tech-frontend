@@ -5,7 +5,7 @@
         src="@/assets/img/icon-flame.svg">
     </div>
     <div class="max-w-650 py-2 px-5">
-      <h4 class="uppercase py-2 text-shark leading-normal font-hind font-extrabold">{{ title }}</h4>
+      <h4 class="uppercase text-xl md:text-2xl py-2 text-shark leading-normal font-hind font-extrabold">{{ title }}</h4>
       <p class="text-shark leading-normal font-hind font-normal">{{ text }}</p>
     </div>
   </div>

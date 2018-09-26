@@ -2,7 +2,7 @@
   <div class="flex flex-row">
     <div class="flex mr-4">
       <img
-        class="rounded-full w-24 h-24"
+        class="rounded-full w-16 h-16 md:w-24 md:h-24"
         :src="image">
     </div>
     <div class="flex flex-col w-48">

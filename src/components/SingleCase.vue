@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-grow flex-col">
     <div class="flex m-2">
-      <h1 class="uppercase text-caribbean-green text-2xl" v-text="name"></h1>
+      <h1 class="uppercase text-caribbean-green text-xl md:text-2xl" v-text="name"></h1>
     </div>
     <div class="flex flex-wrap">
       <case-tag class="m-2" v-for="(tag, index) in tags" :key="'tag'+index" :name="tag" />
