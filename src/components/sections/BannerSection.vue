@@ -2,11 +2,11 @@
   <div>
     <div
       id="banner"
-      :class="'relative flex flex-col relative py-16 h-banner min-h-500'"
+      class="relative flex flex-col relative py-16 h-banner min-h-500"
       style="background-size: cover; "
         :style="{ background: headerBgReady }">
       <div
-        class="flex-1 text-left p-4 md:p-8">
+        class="flex-1 text-center md:text-left p-4 md:p-8">
         <vue-anime-time-line
           ref="intro"
           :playing="playing">
