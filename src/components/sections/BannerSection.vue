@@ -51,7 +51,7 @@
           class="flex flex-col justify-center">
           <vue-anime
             :duration="800"
-            offset="+=0"
+            offset="+=100"
             autoplay="true"
             :animate="{
               translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
