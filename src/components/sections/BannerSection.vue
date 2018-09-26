@@ -62,23 +62,19 @@
               <div
                 @mouseenter="laravelLogoHover = true; laravelVibrate = false"
                 @mouseleave="laravelLogoHover = false"
-                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110"
-                :class="{'scale-80': laravelVibrate === false}">
+                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate-15"
+                :class="{'rotate-0': laravelVibrate === false}">
                 <vue-anime
-                  class="flex items-center"
+                  class="flex items-center rotate-0"
                   :delay="4000"
                   :autoplay="true"
                   :playing="laravelVibrate"
                   :loop="true"
                   :animate="{
-                    translateX: [
-                    {value: 0, duration: 100},
-                    {value: 2, duration: 100},
-                    {value: -2, duration: 100},
-                    {value: 2, duration: 100},
-                    {value: -2, duration: 100},
-                    {value: 2, duration: 100},
-                    {value: 0, duration: 100}]
+                    rotate: [
+                      {value: 0, duration: 10000},
+                      {value: '15deg', duration: 900},
+                      {value: 0, duration: 900}],
                   }">
                   <img
                     class="w-16 h-16 mr-4 my-6"
@@ -98,11 +94,11 @@
               <div
                 @mouseenter="vueLogoHover = true; vueVibrate = false"
                 @mouseleave="vueLogoHover = false"
-                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110"
-                  :class="{'scale-80': vueVibrate === false}">
+                class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate--15"
+                  :class="{'rotate-0': vueVibrate === false}">
                 <vue-anime
                   class="flex items-center"
-                  :delay="4000"
+                  :delay="5000"
                   :playing="vueVibrate"
                   :autoplay="true"
                   :loop="true"
