@@ -11,4 +11,22 @@
   .move-r-2 {
     transform: translateX(2px);
   }
+  .transition-opacity-40 {
+    transition: opacity 0.4s;
+  }
+  .transition-all-15 {
+    transition: all .15s ease-in-out;
+  }
+  .scale-0 {
+    transform: scale(0);
+  }
+  .scale-110 {
+    transform: scale(1.1);
+  }
+  .scale-x-0 {
+    transform: scaleX(0);
+  }
+  .scale-x-100 {
+    transform: scaleX(1);
+  }
 }
