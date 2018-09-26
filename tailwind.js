@@ -484,6 +484,7 @@ module.exports = {
   width: {
     'auto': 'auto',
     'px': '1px',
+    '0': '0',
     '1': '0.25rem',
     '2': '0.5rem',
     '3': '0.75rem',
@@ -550,7 +551,12 @@ module.exports = {
     '96': '24rem',
     'full': '100%',
     'screen': '100vh',
-    'banner': 'calc(100vh - 5rem)'
+    'banner': 'calc(100vh - 5rem)',
+    'vh-50': '50vh',
+    'vh-60': '60vh',
+    'vh-70': '70vh',
+    'vh-75': '75vh',
+    'vh-80': '80vh'
   },
 
 
@@ -592,7 +598,11 @@ module.exports = {
     '0': '0',
     'full': '100%',
     'screen': '100vh',
+    '300': '300px',
+    '400': '400px',
     '500': '500px',
+    '600': '600px',
+    '700': '700px',
   },
 
 
