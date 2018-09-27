@@ -3,7 +3,8 @@
     <div class="flex mr-4">
       <img
         class="rounded-full w-16 h-16 md:w-24 md:h-24"
-        :src="image">
+        :src="image"
+        :alt="'photo_' + name">
     </div>
     <div class="flex flex-col w-48">
       <div class="flex text-caribbean-green font-extrabold uppercase text-left">

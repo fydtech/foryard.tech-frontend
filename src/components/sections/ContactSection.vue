@@ -25,7 +25,8 @@
         class="self-stretch hidden lg:flex justify-center items-end md:w-1/4 lg:w-1/3 xl:w-2/5">
         <img
           :src="coffeeCup"
-          class="mb-16 w-64" />
+          class="mb-16 w-64"
+          alt="coffee_cup" />
       </div>
     </div>
     <div id="footer" class="w-full bg-tangaroa-darker">

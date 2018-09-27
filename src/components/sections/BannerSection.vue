@@ -78,7 +78,8 @@
                   }">
                   <img
                     class="w-16 h-16 mr-4 my-6"
-                    src="@/assets/img/laravel-hover.svg">
+                    src="@/assets/img/laravel-hover.svg"
+                    alt="laravel_logo">
                 </vue-anime>
               </div>
               <div
@@ -114,7 +115,8 @@
                   }">
                   <img
                     class="w-16 h-16 mr-4 my-6"
-                    src="@/assets/img/vue-hover.svg">
+                    src="@/assets/img/vue-hover.svg"
+                    alt="vue_logo">
                   </vue-anime>
                 </div>
               <div
@@ -150,7 +152,8 @@
           :loop="true">
           <img
             class="p-4"
-            src="@/assets/img/chevron-down.svg" />
+            src="@/assets/img/chevron-down.svg"
+            alt="chevron_down" />
         </vue-anime>
       </a>
     </div>
