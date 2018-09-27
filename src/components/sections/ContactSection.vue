@@ -9,15 +9,15 @@
         <div class="ml-12 md:ml-24 text-white text-lg">
           <div class="flex items-center">
             <img src="@/assets/img/phone.svg" alt="phone_icon">
-            <a class="py-2 ml-6 text-white no-underline" href="tel:+3188 004 0600" rel="noreferrer nofollow">+31 (0) 88 004 0600</a>
+            <a class="py-2 ml-6 text-white no-underline hover:text-caribbean-green" href="tel:+3188 004 0600" rel="noreferrer nofollow">+31 (0) 88 004 0600</a>
           </div>
           <div class="flex items-center">
             <img src="@/assets/img/email.svg" alt="email_icon">
-            <a class="py-2 ml-6 text-white no-underline" href="mailto:dev@foryard.tech" rel="noreferrer nofollow">dev@foryard.tech</a>
+            <a class="py-2 ml-6 text-white no-underline hover:text-caribbean-green" href="mailto:dev@foryard.tech" rel="noreferrer nofollow">dev@foryard.tech</a>
           </div>
           <div class="flex items-center">
             <img class="self-start sm:self-auto pt-2 sm:pt-0" src="@/assets/img/location.svg" alt="location_icon">
-            <a class="py-2 ml-6 text-white no-underline" href="https://goo.gl/maps/HpXX6YLcJtM2" rel="noreferrer nofollow">Kuipersstraat 35, 1074 EE Amsterdam</a>
+            <a class="py-2 ml-6 text-white no-underline hover:text-caribbean-green" href="https://goo.gl/maps/HpXX6YLcJtM2" rel="noreferrer nofollow">Kuipersstraat 35, 1074 EE Amsterdam</a>
           </div>
         </div>
       </div>
@@ -46,18 +46,19 @@
         </div>
         <img
           :src="coffeeCup"
-          class="mb-16 w-64 relative" />
+          class="mb-16 w-64 relative"
+          alt="coffee_cup" />
       </div>
     </div>
     <div id="footer" class="w-full bg-tangaroa-darker">
       <div class="px-10 md:px-20 h-20 flex justify-center lg:justify-start items-center text-white">
         <div class="mx-4 lg:mr-4 flex items-center">
           <img src="@/assets/img/github.svg" alt="github_icon">
-          <a class="py-2 ml-2 text-white no-underline" href="https://github.com/fydtech" rel="noreferrer nofollow">fydtech</a>
+          <a class="py-2 ml-2 text-white no-underline hover:text-caribbean-green" href="https://github.com/fydtech" rel="noreferrer nofollow">fydtech</a>
         </div>
         <div class="mx-4 lg:mr-4 flex items-center relative">
           <img src="@/assets/img/twitter.svg" alt="twitter_icon">
-          <a class="py-2 ml-2 text-white no-underline" href="https://twitter.com/fydtech" rel="noreferrer nofollow">@fydtech</a>
+          <a class="py-2 ml-2 text-white no-underline hover:text-caribbean-green" href="https://twitter.com/fydtech" rel="noreferrer nofollow">@fydtech</a>
         </div>
       </div>
     </div>

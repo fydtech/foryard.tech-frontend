@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col sm:flex-row bg-white sm:px-10 lg:px-20">
     <div class="flex justify-center sm:justify-start">
-      <img class="h-8 md:h-12 my-4" src="@/assets/img/foryard-logo-tech.svg">
+      <img class="h-8 md:h-12 my-4" src="@/assets/img/foryard-logo-tech.svg" alt="logo">
     </div>
     <div class="flex flex-grow items-center justify-center sm:justify-end mb-4 sm:mb-0">
       <div class="flex mr-4 uppercase">

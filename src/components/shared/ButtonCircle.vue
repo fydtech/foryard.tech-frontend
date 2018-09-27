@@ -9,10 +9,12 @@
         class="text-white bg-caribbean-green h-10 w-10 rounded-full shadow-green move-fast shadow-green focus:outline-none flex items-center justify-center">
         <img
           v-if="direction === 'left'"
-          src="@/assets/img/chevron-prev.svg" />
+          src="@/assets/img/chevron-prev.svg"
+          alt="chevron_prev" />
         <img
           v-else-if="direction === 'right'"
-          src="@/assets/img/chevron-next.svg" />
+          src="@/assets/img/chevron-next.svg"
+          alt="chevron_next" />
       </button>
       <span
         v-if="buttonLabel"
