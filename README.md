@@ -32,4 +32,4 @@ npm run lint
 ```
 
 ## Security vulnerabilities
-If you discover a security vulnerability within this project please send an e-mail to our developers at dev@foryard.nl. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this project please send an e-mail to our developers at dev@foryard.tech. All security vulnerabilities will be promptly addressed.
