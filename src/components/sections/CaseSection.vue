@@ -39,7 +39,7 @@
       <div class="flex flex-col w-full md:w-1/2 pt-12 md:pt-24 px-8 md:pl-0 md:pr-4 min-h-600">
         <vue-anime ref="case" class="flex flex-grow" :animate="{
           scale: [{value: 0.9, duration: 200, easing: 'easeOutCubic'}, {value: 1, duration: 600, easing: 'easeOutCubic' }],
-          opacity: [{value: 0.3, duration: 200, easing: 'easeOutCubic'}, {value: 1, duration: 600, easing: 'easeOutCubic'}]
+          opacity: [{value: 0.1, duration: 200, easing: 'easeOutCubic'}, {value: 0, duration: 0}, {value: 1, duration: 600, easing: 'easeOutCubic'}]
         }"
         :playing="false">
           <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
