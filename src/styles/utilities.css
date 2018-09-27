@@ -35,4 +35,7 @@
   .rotate--15 {
     transform: rotate(-15deg);
   }
+  .blur-10 {
+    filter: blur(10px);
+  }
 }
