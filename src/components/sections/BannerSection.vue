@@ -120,7 +120,7 @@
               <span
                 class="font-plex italic text-white text-xs hover:text-caribbean-green"
                 v-if="vueLogoHover">
-                Vue JS: The Progressive JavaScript Framework
+                Vue.js: The Progressive JavaScript Framework
               </span>
               <span
                 class="font-plex italic text-white text-xs hover:text-caribbean-green"
