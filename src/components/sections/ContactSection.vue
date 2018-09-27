@@ -1,7 +1,7 @@
 <template>
   <div
     id="contact"
-    class="bg-tangaroa">
+    class="bg-tangaroa overflow-hidden">
     <div class="flex flex-wrap container px-10 lg:px-20 xl:px-10 mx-auto justify-center items-center">
       <div class="min-h-450 md:min-h-400 my-16 w-full md:w-3/4 lg:w-2/3 xl:w-3/5 flex flex-col justify-between">
         <h1 class="uppercase text-3xl lg:text-4xl text-caribbean-green leading-none">Zin in koffie?</h1>
