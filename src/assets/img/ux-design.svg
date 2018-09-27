@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon / ux-design</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon-/-ux-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5" fill="#26E88A" opacity="0.300000012">
+            <circle id="Oval-4-Copy" cx="27.5" cy="27.5" r="27.5"></circle>
+        </g>
+        <rect id="Rectangle" stroke="#202D3A" stroke-width="3" x="17.5" y="16.5" width="43" height="43" rx="21.5"></rect>
+        <path d="M31,44 C33.7098329,46.6491559 36.3977149,47.9737339 39.063646,47.9737339 C41.7295772,47.9737339 44.3808744,46.6491559 47.0175376,44" id="Path-3" stroke="#202D3A" stroke-width="3" stroke-linecap="round"></path>
+        <g id="Group" transform="translate(29.000000, 29.000000)" fill="#202D3A">
+            <circle id="Oval" cx="2.5" cy="2.5" r="2.5"></circle>
+            <circle id="Oval-Copy" cx="17.5" cy="2.5" r="2.5"></circle>
+        </g>
+    </g>
+</svg>

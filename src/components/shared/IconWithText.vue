@@ -2,7 +2,7 @@
   <div class="flex">
     <div class="h-32 w-32 fill-current inline-block">
       <img
-        src="@/assets/img/icon-flame.svg">
+        :src="img">
     </div>
     <div class="max-w-650 py-2 px-5">
       <h4 class="uppercase text-xl md:text-2xl py-2 text-shark leading-normal font-hind font-extrabold">{{ title }}</h4>
@@ -20,6 +20,10 @@ export default {
       required: true
     },
     text: {
+      type: String,
+      required: true
+    },
+    img: {
       type: String,
       required: true
     }
