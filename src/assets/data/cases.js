@@ -56,7 +56,7 @@ export const cases = [
       'stripe',
       'scalable'
     ],
-    url: 'https://stemapp.io/'
+    url: 'https://www.stemapp.io/'
   },
   {
     name: 'OnzeZon',
