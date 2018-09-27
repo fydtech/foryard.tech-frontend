@@ -6,7 +6,7 @@
       </div>
       <div class="flex flex-wrap w-full md:justify-center">
         <div class="flex mt-2 md:mt-0 mx-4 lg:mx-6" v-for="(item, index) in cases" :key="'case'+index">
-          <a href="" @click.prevent="selectCase(index)" class="border-b-2 hover:border-tag-grey" :class="getBorderColor(index)">
+          <a href="" @click.prevent="selectCase(index)" class="border-b-2 sm:hover:border-tag-grey" :class="getBorderColor(index)">
             <h2 class="uppercase text-white font-light tracking-wide text-lg md:text-xl lg:text-2xl py-2 md:pb-4" v-text="item.name"></h2>
           </a>
         </div>
@@ -36,15 +36,15 @@
             alt="Buitenlandportaal_screen" />
         </vue-anime>
       </div>
-      <div class="flex flex-col w-full md:w-1/2 pt-12 md:pt-24 px-8 md:pl-0 md:pr-4 min-h-600">
+      <div class="flex flex-col w-full md:w-1/2 pt-12 md:pt-24 mx-0 md:pr-4 min-h-600">
         <vue-anime ref="case" class="flex flex-grow" :animate="{
           scale: [{value: 0.9, duration: 200, easing: 'easeOutCubic'}, {value: 1, duration: 600, easing: 'easeOutCubic' }],
           opacity: [{value: 0.1, duration: 200, easing: 'easeOutCubic'}, {value: 0, duration: 0}, {value: 1, duration: 600, easing: 'easeOutCubic'}]
         }"
         :playing="false">
-          <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
+          <single-case :name="cases[selectedCase].name" :url="cases[selectedCase].url" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
         </vue-anime>
-        <div class="flex flex-none mb-16 mt-4">
+        <div class="flex flex-none mb-16 mt-4 mx-4">
           <button-circle direction="left" @click.native="prevCase()" class="mr-3" @mouseenter.native="showPrevCaseHover = true" @mouseleave.native="showPrevCaseHover = false" />
           <button-circle direction="right" @click.native="nextCase()" @mouseenter.native="showNextCaseHover = true" @mouseleave.native="showNextCaseHover = false" buttonLabel="Volgende case" role="button" />
         </div>

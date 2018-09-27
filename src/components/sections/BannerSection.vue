@@ -5,7 +5,7 @@
     style="background-size: cover; "
       :style="{ background: headerBgReady }">
     <div
-      class="text-left p-5 md:p-8 sm:px-10 lg:px-20">
+      class="text-center md:text-left p-5 md:p-8 sm:px-10 lg:px-20">
       <vue-anime-time-line
         ref="intro"
         :playing="playing">
