@@ -34,7 +34,7 @@
           scale: [{value: 0.85, duration: 100, easing: 'easeOutElastic' }, {value: 1, duration: 900 }],
         }"
         :playing="false">
-          <single-case :name="cases[selectedCase].name" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
+          <single-case :name="cases[selectedCase].name" :url="cases[selectedCase].url" :description="cases[selectedCase].description" :tags="cases[selectedCase].tags" />
         </vue-anime>
         <div class="flex flex-none mb-16 mt-4 mx-4">
           <button-circle direction="left" @click.native="prevCase()" class="mr-3" @mouseenter.native="showPrevCaseHover = true" @mouseleave.native="showPrevCaseHover = false" />

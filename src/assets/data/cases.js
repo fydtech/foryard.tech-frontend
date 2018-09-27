@@ -16,7 +16,8 @@ export const cases = [
       'crm',
       'mollie',
       'search'
-    ]
+    ],
+    url: 'https://buitenlandportaal.nl/'
   },
   {
     name: 'Stupas',
@@ -32,7 +33,8 @@ export const cases = [
       'ux',
       'performance',
       'sass'
-    ]
+    ],
+    url: 'https://stupas.nl/'
   },
   {
     name: 'Stem',
@@ -53,7 +55,8 @@ export const cases = [
       'node.js',
       'stripe',
       'scalable'
-    ]
+    ],
+    url: 'https://www.stemapp.io/'
   },
   {
     name: 'OnzeZon',
@@ -72,7 +75,8 @@ export const cases = [
       'invoices',
       'sass',
       'api'
-    ]
+    ],
+    url: 'https://onzezon.nu/'
   },
   {
     name: 'CHIMP',
@@ -87,6 +91,7 @@ export const cases = [
       'scalable',
       'security',
       'vue.js'
-    ]
+    ],
+    url: 'https://chimp.chimpdeck.com/'
   },
 ]
