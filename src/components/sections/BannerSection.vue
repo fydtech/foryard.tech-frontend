@@ -1,12 +1,12 @@
 <template>
   <div
     id="banner"
-    :class="'relative flex flex-col justify-center relative py-16 h-banner md:h-vh-60'"
+    :class="'relative flex flex-col justify-center relative py-16 min-h-banner md:min-h-vh-60'"
     style="background-size: cover;"
-      :style="{ background: headerBgReady }">
+    :style="{ background: headerBgReady }">
     <div
       id="split-screen"
-      class="flex flex-wrap p-5 md:p-8 sm:px-10 lg:px-20">
+      class="flex flex-wrap justify-between p-5 md:p-8 sm:px-10 lg:px-20">
       <div
         id="intro-animation"
         class="w-full md:w-1/2 text-center md:text-left">
@@ -136,7 +136,7 @@
           </div>
         </vue-anime-time-line>
       </div>
-      <div class="hidden md:block w-full md:w-1/2 self-stretch">
+      <div class="hidden md:block w-full md:w-1/2 xl:w-2/5 self-stretch flex">
         <banner-laptop />
       </div>
     </div>
@@ -171,7 +171,7 @@
 </template>
 
 <script>
-import headerBg from '@/assets/img/header-bg.jpg'
+import headerBg from '@/assets/img/header-bg.svg'
 import BannerLaptop from '@/components/BannerLaptop'
 import { VueAnime } from 'vue-anime'
 import { VueAnimeGroup } from 'vue-anime'
@@ -203,7 +203,7 @@ export default {
     loadedImage.src = this.headerBg;
     this.waitForImageToLoad(loadedImage)
     .then(() => {
-      this.headerBgReady = `linear-gradient(rgba(26, 36, 47, 0.9), rgba(26, 36, 47, 0.9)), url(${headerBg})`;
+      this.headerBgReady = `url(${headerBg})`;
       this.playing = true;
     })
   },

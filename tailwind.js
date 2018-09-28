@@ -600,6 +600,8 @@ module.exports = {
     '0': '0',
     'full': '100%',
     'screen': '100vh',
+    'vh-60': '60vh',
+    'banner': 'calc(100vh - 5rem)',
     '300': '300px',
     '400': '400px',
     '450': '450px',

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="900px" viewBox="0 0 1440 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>BG-Header</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="900"></rect>
+        <radialGradient cx="28.567332%" cy="27.2074416%" fx="28.567332%" fy="27.2074416%" r="87.9094612%" gradientTransform="translate(0.285673,0.272074),scale(0.625000,1.000000),rotate(46.479748),translate(-0.285673,-0.272074)" id="radialGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="0.999854998%" y1="0%" x2="100%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#202D3A" stop-opacity="0.750707654" offset="0%"></stop>
+            <stop stop-color="#202D3A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#EEEEEE" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Tech" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dark-light-Copy" transform="translate(0.000000, -90.000000)">
+            <g id="BG-Header" transform="translate(0.000000, 90.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#202D3A" xlink:href="#path-1"></use>
+                <rect id="Rectangle-2" fill="url(#radialGradient-3)" opacity="0.600000024" mask="url(#mask-2)" x="0" y="0" width="1440" height="900"></rect>
+                <rect id="Rectangle" fill="url(#linearGradient-4)" mask="url(#mask-2)" x="0" y="0" width="1440" height="900"></rect>
+                <circle id="Oval" fill-opacity="0.0500000007" fill="url(#linearGradient-5)" mask="url(#mask-2)" cx="1474" cy="-129" r="753"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
