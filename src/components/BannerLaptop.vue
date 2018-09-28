@@ -43,7 +43,6 @@ export default {
   },
   methods: {
     codePlaying() {
-      console.log("play");
       return true;
     }
   }
