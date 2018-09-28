@@ -7,7 +7,8 @@
       <vue-anime
         :autoplay="true"
         :playing="true"
-        :loop="true"
+        :loop="false"
+        :delay="3000"
         style="clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);"
         :animate="{
           clipPath: [
@@ -40,11 +41,6 @@ export default {
     VueAnime,
     VueAnimeGroup,
     VueAnimeTimeLine
-  },
-  methods: {
-    codePlaying() {
-      return true;
-    }
   }
 }
 </script>

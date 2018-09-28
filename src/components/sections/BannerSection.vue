@@ -1,9 +1,8 @@
 <template>
   <div
     id="banner"
-    :class="'relative flex flex-col justify-center relative py-16 min-h-banner md:min-h-vh-60'"
-    style="background-size: cover;"
-    :style="{ background: headerBgReady }">
+    class="relative flex flex-col justify-center relative py-16 min-h-banner md:min-h-vh-60 bg-right bg-cover"
+    :style="{ backgroundImage: headerBgReady }">
     <div
       id="split-screen"
       class="flex flex-wrap justify-between p-5 md:p-8 sm:px-10 lg:px-20">
@@ -74,7 +73,7 @@
                       :delay="4000"
                       :autoplay="true"
                       :playing="laravelVibrate"
-                      :loop="true"
+                      :loop="false"
                       :animate="{
                         rotate: [
                           {value: 0, duration: 10000},
@@ -99,7 +98,7 @@
                       :delay="5000"
                       :playing="vueVibrate"
                       :autoplay="true"
-                      :loop="true"
+                      :loop="false"
                       :animate="{
                         translateX: [
                         {value: 2, duration: 100},
@@ -142,7 +141,8 @@
     </div>
     <div
       id="next-slide"
-      class="absolute pin-b pin-l text-center w-full mb-6">
+      class="absolute pin-b pin-l text-center w-full mb-6"
+      @mouseenter="downArrowHover = true" @mouseleave="downArrowHover = false" >
       <a
         v-scroll-to="'#products'"
         href="#">
@@ -159,7 +159,8 @@
               easing: 'easeOutQuad'
             }]
           }"
-          :loop="true">
+          :loop="true"
+          :playing="downArrowHover">
           <img
             class="p-4"
             src="@/assets/img/chevron-down.svg"
@@ -195,7 +196,8 @@ export default {
       laravelLogoHover: false,
       vueLogoHover: false,
       laravelVibrate: true,
-      vueVibrate: true
+      vueVibrate: true,
+      downArrowHover: false
     };
   },
   mounted() {
