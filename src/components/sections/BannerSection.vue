@@ -61,80 +61,82 @@
                 translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
                 opacity: [{ value: 1, duration: 800 }]
               }"
-              class="opacity-0 scale-0">
-              <div class="flex items-center justify-center md:justify-start">
-                <div
-                  @mouseenter="laravelLogoHover = true; laravelVibrate = false"
-                  @mouseleave="laravelLogoHover = false"
-                  class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate-15"
-                  :class="{'rotate-0': laravelVibrate === false}">
-                  <vue-anime
-                    class="flex items-center rotate-0"
-                    :delay="4000"
-                    :autoplay="true"
-                    :playing="laravelVibrate"
-                    :loop="true"
-                    :animate="{
-                      rotate: [
-                        {value: 0, duration: 10000},
-                        {value: '15deg', duration: 900},
-                        {value: 0, duration: 900}],
-                    }">
-                    <img
-                      class="w-16 h-16 mr-4 my-6"
-                      src="@/assets/img/laravel-hover.svg">
-                  </vue-anime>
-                </div>
-                <div
-                  class="bg-tag-grey p-4 rounded items-center flex scale-x-0"
-                  :class="{ 'w-48 transition-all-15 scale-x-100': laravelLogoHover }">
-                  <span
-                    class="font-plex italic text-white text-xs hover:text-caribbean-green">
-                    Laravel: The PHP Framework For Web Artisans
-                  </span>
-                </div>
-              </div>
-              <div class="flex items-center justify-center md:justify-start">
-                <div
-                  @mouseenter="vueLogoHover = true; vueVibrate = false"
-                  @mouseleave="vueLogoHover = false"
-                  class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate--15"
-                    :class="{'rotate-0': vueVibrate === false}">
-                  <vue-anime
-                    class="flex items-center"
-                    :delay="5000"
-                    :playing="vueVibrate"
-                    :autoplay="true"
-                    :loop="true"
-                    :animate="{
-                      translateX: [
-                      {value: 2, duration: 100},
-                      {value: -2, duration: 100},
-                      {value: 2, duration: 100},
-                      {value: -2, duration: 100},
-                      {value: 2, duration: 100},
-                      {value: -2, duration: 100},
-                      {value: 0, duration: 100}]
-                    }">
-                    <img
-                      class="w-16 h-16 mr-4 my-6"
-                      src="@/assets/img/vue-hover.svg">
+              class="opacity-0 scale-0 flex flex-wrap justify-center md:justify-start">
+              <div class="flex justify-center md:justify-start w-full">
+                <div class="flex items-center justify-center md:justify-start">
+                  <div
+                    @mouseenter="laravelLogoHover = true; laravelVibrate = false"
+                    @mouseleave="laravelLogoHover = false"
+                    class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate-15"
+                    :class="{'rotate-0': laravelVibrate === false}">
+                    <vue-anime
+                      class="flex items-center rotate-0"
+                      :delay="4000"
+                      :autoplay="true"
+                      :playing="laravelVibrate"
+                      :loop="true"
+                      :animate="{
+                        rotate: [
+                          {value: 0, duration: 10000},
+                          {value: '15deg', duration: 900},
+                          {value: 0, duration: 900}],
+                      }">
+                      <img
+                        class="w-16 h-16 mr-8 my-6"
+                        src="@/assets/img/laravel-hover.svg"
+                        alt="laravel_logo">
                     </vue-anime>
                   </div>
-                <div
-                  class="bg-tag-grey p-4 rounded items-center flex scale-x-0"
-                  :class="{ 'w-48 transition-all-15 scale-x-100': vueLogoHover }">
-                  <span
-                    class="font-plex italic text-white text-xs hover:text-caribbean-green">
-                    Vue JS: The Progressive JavaScript Framework
-                </span>
                 </div>
+                <div class="flex items-center justify-center md:justify-start">
+                  <div
+                    @mouseenter="vueLogoHover = true; vueVibrate = false"
+                    @mouseleave="vueLogoHover = false"
+                    class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate--15"
+                      :class="{'rotate-0': vueVibrate === false}">
+                    <vue-anime
+                      class="flex items-center"
+                      :delay="5000"
+                      :playing="vueVibrate"
+                      :autoplay="true"
+                      :loop="true"
+                      :animate="{
+                        translateX: [
+                        {value: 2, duration: 100},
+                        {value: -2, duration: 100},
+                        {value: 2, duration: 100},
+                        {value: -2, duration: 100},
+                        {value: 2, duration: 100},
+                        {value: -2, duration: 100},
+                        {value: 0, duration: 100}]
+                      }">
+                      <img
+                        class="w-16 h-16 my-6"
+                        src="@/assets/img/vue-hover.svg"
+                        alt="vue_logo">
+                    </vue-anime>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-tag-grey p-4 rounded items-center flex scale-x-0 h-16 w-48"
+                :class="{ 'transition-all-15 scale-x-100': vueLogoHover || laravelLogoHover }">
+                <span
+                  class="font-plex italic text-white text-xs hover:text-caribbean-green"
+                  v-if="vueLogoHover">
+                  Vue.js: The Progressive JavaScript Framework
+                </span>
+                <span
+                  class="font-plex italic text-white text-xs hover:text-caribbean-green"
+                  v-if="laravelLogoHover">
+                  Laravel: The PHP Framework For Web Artisans
+                </span>
               </div>
             </vue-anime>
           </div>
         </vue-anime-time-line>
       </div>
-      <div class="w-full md:w-1/2 self-stretch">
+      <div class="hidden md:block w-full md:w-1/2 self-stretch">
         <banner-laptop />
       </div>
     </div>
@@ -160,7 +162,8 @@
           :loop="true">
           <img
             class="p-4"
-            src="@/assets/img/chevron-down.svg" />
+            src="@/assets/img/chevron-down.svg"
+            alt="chevron_down" />
         </vue-anime>
       </a>
     </div>

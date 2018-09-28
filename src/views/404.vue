@@ -3,7 +3,7 @@
     <div class="flex flex-col lg:flex-row bg-white lg:h-20 px-20">
       <div class="flex">
         <div class="flex">
-          <img class="my-2" src="@/assets/img/foryard-logo-tech.svg">
+          <img class="my-2" src="@/assets/img/foryard-logo-tech.svg" alt="logo">
         </div>
       </div>
     </div>
