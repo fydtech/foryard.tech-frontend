@@ -27,7 +27,7 @@
           <div>
             <vue-anime
               class="w-24 h-24 bg-white opacity-25 z-10 rounded-full blur-10"
-              :autoplay="true"
+              :playing="playing"
               :loop="true"
               :animate="{
                 translateY: [{
@@ -70,8 +70,13 @@ import { VueAnime } from 'vue-anime'
 import { VueAnimeGroup } from 'vue-anime'
 import { VueAnimeTimeLine } from 'vue-anime'
 import coffeeCup from '@/assets/img/coffee-shade.svg';
+import inViewport from 'vue-in-viewport-mixin'
+
 export default {
   name: 'ContactSection',
+
+  mixins: [inViewport],
+
   components: {
     VueAnime,
     VueAnimeGroup,
@@ -79,9 +84,16 @@ export default {
   },
   data() {
     return {
-      coffeeCup
+      coffeeCup,
+      playing: false
     };
-  }
+  },
+
+  watch: {
+    'inViewport.now': function(visible) {
+      this.playing = visible
+    }
+  },
 }
 </script>
 
