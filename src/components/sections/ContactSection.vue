@@ -3,7 +3,7 @@
     id="contact"
     class="bg-tangaroa overflow-hidden">
     <div class="flex flex-wrap container pr-10 lg:px-20 xl:px-10 mx-auto justify-center items-center">
-      <div class="min-h-450 md:min-h pl-2 my-16 w-full md:w-3/4 lg:w-2/3 xl:w-3/5 flex flex-col justify-between">
+      <div class="min-h-450 md:min-h ml-2 sm:ml-0 my-16 w-full md:w-3/4 lg:w-2/3 xl:w-3/5 flex flex-col justify-between">
         <h1 class="uppercase text-3xl lg:text-4xl text-caribbean-green leading-none">Zin in koffie?</h1>
         <p class="text-white text-lg leading-loose">Wij ook! Een goede kop koffie (of thee) is bij uitstek een prettige situatie om jouw vraag te bespreken. Laten we samen kijken naar de mogelijkheden en het realiseren van het juiste stukje software voor jouw organisatie.</p>
         <div class="ml-12 md:ml-24 text-white text-lg">
