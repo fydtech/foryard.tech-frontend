@@ -10,6 +10,7 @@
   "dependencies": {
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
+    "vue-in-viewport-mixin": "^1.0.4",
     "vue-anime": "^0.2.0",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.13.0"
