@@ -206,7 +206,9 @@ export default {
     this.waitForImageToLoad(loadedImage)
     .then(() => {
       this.headerBgReady = `url(${headerBg})`;
-      this.playing = true;
+      setTimeout(() => {
+        this.playing = true;
+      }, 400);
     })
   },
   methods: {
