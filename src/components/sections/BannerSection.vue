@@ -48,46 +48,8 @@
               :animate="logoAnimation"
               class="opacity-0 scale-0 flex flex-wrap justify-center md:justify-start">
               <div class="flex justify-center md:justify-start w-full">
-                <div class="flex items-center justify-center md:justify-start">
-                  <div
-                    @mouseenter="laravelLogoHover = true; laravelVibrate = false"
-                    @mouseleave="laravelLogoHover = false"
-                    class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate-15"
-                    :class="{'rotate-0': laravelVibrate === false}">
-                    <vue-anime
-                      class="flex items-center rotate-0"
-                      :delay="4000"
-                      :autoplay="true"
-                      :playing="laravelVibrate"
-                      :loop="false"
-                      :animate="laravelVibrateAnimation">
-                      <img
-                        class="w-16 h-16 mr-8 my-6"
-                        src="@/assets/img/laravel-hover.svg"
-                        alt="laravel_logo">
-                    </vue-anime>
-                  </div>
-                </div>
-                <div class="flex items-center justify-center md:justify-start">
-                  <div
-                    @mouseenter="vueLogoHover = true; vueVibrate = false"
-                    @mouseleave="vueLogoHover = false"
-                    class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate--15"
-                      :class="{'rotate-0': vueVibrate === false}">
-                    <vue-anime
-                      class="flex items-center"
-                      :delay="5000"
-                      :playing="vueVibrate"
-                      :autoplay="true"
-                      :loop="false"
-                      :animate="vueVibrateAnimation">
-                      <img
-                        class="w-16 h-16 my-6"
-                        src="@/assets/img/vue-hover.svg"
-                        alt="vue_logo">
-                    </vue-anime>
-                  </div>
-                </div>
+                <banner-tech-logo type="laravel" :animation="laravelVibrateAnimation" @mouseenter.native="laravelLogoHover = true" @mouseleave.native="laravelLogoHover = false" />
+                <banner-tech-logo type="vue" :animation="vueVibrateAnimation" @mouseenter.native="vueLogoHover = true" @mouseleave.native="vueLogoHover = false" />
               </div>
               <div
                 class="bg-tag-grey p-4 rounded items-center flex scale-x-0 h-16 w-48"
@@ -135,6 +97,7 @@
 <script>
 import headerBg from '@/assets/img/header-bg.svg'
 import BannerLaptop from '@/components/BannerLaptop'
+import BannerTechLogo from '@/components/BannerTechLogo'
 import { VueAnime } from 'vue-anime'
 import { VueAnimeGroup } from 'vue-anime'
 import { VueAnimeTimeLine } from 'vue-anime'
@@ -146,7 +109,8 @@ export default {
     VueAnime,
     VueAnimeGroup,
     VueAnimeTimeLine,
-    BannerLaptop
+    BannerLaptop,
+    BannerTechLogo
   },
   data() {
     return {
@@ -157,8 +121,6 @@ export default {
       sentence2: "met bewezen moderne technologie",
       laravelLogoHover: false,
       vueLogoHover: false,
-      laravelVibrate: true,
-      vueVibrate: true,
       downArrowHover: false,
       ...animations
     };
