@@ -20,7 +20,11 @@
           class="hidden md:block absolute"
           style="clip-path: circle(100% at 50% 50%); -webkit-clip-path: circle(100% at 50% 50%);"
           :animate="{
-            '-webkit-clip-path': [
+            clipPath: [
+              {value: 'circle(5% at 60% 40%)', duration: 200, easing: 'easeOutCubic'},
+              {value: 'circle(71.3% at 50% 50%)', duration: 600, easing: 'easeOutCubic'}
+              ],
+            webkitClipPath: [
               {value: 'circle(5% at 60% 40%)', duration: 200, easing: 'easeOutCubic'},
               {value: 'circle(71.3% at 50% 50%)', duration: 600, easing: 'easeOutCubic'}
               ],
