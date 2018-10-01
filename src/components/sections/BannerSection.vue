@@ -17,11 +17,7 @@
               :duration="1100"
               class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green md:text-4xl lg:text-5xl"
               autoplay="true"
-              :animate="{
-                translateY: [ {value: -25, duration: 1000, easing: 'easeOutQuint' }],
-                opacity: [{ value: 1, duration: 1000 }],
-                scale: [{value: 1.5, duration: 100, easing: 'easeOutElastic' }, {value: 1, duration: 900, easing: 'easeOutElastic' }],
-              }">
+              :animate="sentence1Animation1">
               {{ words(sentence1)[0] + '&nbsp;' }}
             </vue-anime>
             <vue-anime v-for="(key, index) in words(sentence1).slice(1)"
@@ -30,11 +26,7 @@
               class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green md:text-4xl lg:text-5xl"
               autoplay="true"
               offset="-=500"
-              :animate="{
-                translateY: [ {value: -25, duration: 1000, easing: 'easeOutQuint' } ],
-                opacity: [{ value: 1, duration: 1000 }],
-                scale: [{value: 1.3, duration: 90, easing: 'easeOutElastic' }, {value: 1, duration: 810, easing: 'easeOutElastic' }],
-              }">{{ key + '&nbsp;' }}
+              :animate="sentence1Animation2">{{ key + '&nbsp;' }}
             </vue-anime>
           </h1>
           <h2 class="my-6 leading-none">
@@ -44,10 +36,7 @@
               :key="'key' + index"
               class="opacity-0 inline-block font-sans font-hind font-normal text-white text-xl md:text-2xl lg:text-3xl"
               autoplay="true"
-              :animate="{
-                translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
-                opacity: [{ value: 1, duration: 800 }]
-              }">{{ key + '&nbsp;' }}
+              :animate="sentence2Animation">{{ key + '&nbsp;' }}
             </vue-anime>
           </h2>
           <div
@@ -56,10 +45,7 @@
               :duration="800"
               offset="+=100"
               autoplay="true"
-              :animate="{
-                translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
-                opacity: [{ value: 1, duration: 800 }]
-              }"
+              :animate="logoAnimation"
               class="opacity-0 scale-0 flex flex-wrap justify-center md:justify-start">
               <div class="flex justify-center md:justify-start w-full">
                 <div class="flex items-center justify-center md:justify-start">
@@ -74,12 +60,7 @@
                       :autoplay="true"
                       :playing="laravelVibrate"
                       :loop="false"
-                      :animate="{
-                        rotate: [
-                          {value: 0, duration: 10000},
-                          {value: '15deg', duration: 900},
-                          {value: 0, duration: 900}],
-                      }">
+                      :animate="laravelVibrateAnimation">
                       <img
                         class="w-16 h-16 mr-8 my-6"
                         src="@/assets/img/laravel-hover.svg"
@@ -99,16 +80,7 @@
                       :playing="vueVibrate"
                       :autoplay="true"
                       :loop="false"
-                      :animate="{
-                        translateX: [
-                        {value: 2, duration: 100},
-                        {value: -2, duration: 100},
-                        {value: 2, duration: 100},
-                        {value: -2, duration: 100},
-                        {value: 2, duration: 100},
-                        {value: -2, duration: 100},
-                        {value: 0, duration: 100}]
-                      }">
+                      :animate="vueVibrateAnimation">
                       <img
                         class="w-16 h-16 my-6"
                         src="@/assets/img/vue-hover.svg"
@@ -147,18 +119,7 @@
         v-scroll-to="'#products'"
         href="#">
         <vue-anime
-          :animate="{
-            translateY: [{
-              value: 10,
-              duration: 1000,
-              easing: 'easeInQuad'
-            },
-            {
-              value: 0,
-              duration: 1000,
-              easing: 'easeOutQuad'
-            }]
-          }"
+          :animate="downArrowAnimation"
           :loop="true"
           :playing="downArrowHover">
           <img
@@ -177,6 +138,7 @@ import BannerLaptop from '@/components/BannerLaptop'
 import { VueAnime } from 'vue-anime'
 import { VueAnimeGroup } from 'vue-anime'
 import { VueAnimeTimeLine } from 'vue-anime'
+import { animations } from '@/assets/anime/banner-animations'
 
 export default {
   name: 'BannerSection',
@@ -197,7 +159,8 @@ export default {
       vueLogoHover: false,
       laravelVibrate: true,
       vueVibrate: true,
-      downArrowHover: false
+      downArrowHover: false,
+      ...animations
     };
   },
   mounted() {
