@@ -17,11 +17,7 @@
               :duration="1100"
               class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green md:text-4xl lg:text-5xl"
               autoplay="true"
-              :animate="{
-                translateY: [ {value: -25, duration: 1000, easing: 'easeOutQuint' }],
-                opacity: [{ value: 1, duration: 1000 }],
-                scale: [{value: 1.5, duration: 100, easing: 'easeOutElastic' }, {value: 1, duration: 900, easing: 'easeOutElastic' }],
-              }">
+              :animate="sentence1Animation1">
               {{ words(sentence1)[0] + '&nbsp;' }}
             </vue-anime>
             <vue-anime v-for="(key, index) in words(sentence1).slice(1)"
@@ -30,11 +26,7 @@
               class="opacity-0 inline-block font-montserrat font-extrabold uppercase text-caribbean-green md:text-4xl lg:text-5xl"
               autoplay="true"
               offset="-=500"
-              :animate="{
-                translateY: [ {value: -25, duration: 1000, easing: 'easeOutQuint' } ],
-                opacity: [{ value: 1, duration: 1000 }],
-                scale: [{value: 1.3, duration: 90, easing: 'easeOutElastic' }, {value: 1, duration: 810, easing: 'easeOutElastic' }],
-              }">{{ key + '&nbsp;' }}
+              :animate="sentence1Animation2">{{ key + '&nbsp;' }}
             </vue-anime>
           </h1>
           <h2 class="my-6 leading-none">
@@ -44,10 +36,7 @@
               :key="'key' + index"
               class="opacity-0 inline-block font-sans font-hind font-normal text-white text-xl md:text-2xl lg:text-3xl"
               autoplay="true"
-              :animate="{
-                translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
-                opacity: [{ value: 1, duration: 800 }]
-              }">{{ key + '&nbsp;' }}
+              :animate="sentence2Animation">{{ key + '&nbsp;' }}
             </vue-anime>
           </h2>
           <div
@@ -56,66 +45,11 @@
               :duration="800"
               offset="+=100"
               autoplay="true"
-              :animate="{
-                translateY: [ {value: -25, duration: 800, easing: 'easeOutQuint' } ],
-                opacity: [{ value: 1, duration: 800 }]
-              }"
+              :animate="logoAnimation"
               class="opacity-0 scale-0 flex flex-wrap justify-center md:justify-start">
               <div class="flex justify-center md:justify-start w-full">
-                <div class="flex items-center justify-center md:justify-start">
-                  <div
-                    @mouseenter="laravelLogoHover = true; laravelVibrate = false"
-                    @mouseleave="laravelLogoHover = false"
-                    class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate-15"
-                    :class="{'rotate-0': laravelVibrate === false}">
-                    <vue-anime
-                      class="flex items-center rotate-0"
-                      :delay="4000"
-                      :autoplay="true"
-                      :playing="laravelVibrate"
-                      :loop="false"
-                      :animate="{
-                        rotate: [
-                          {value: 0, duration: 10000},
-                          {value: '15deg', duration: 900},
-                          {value: 0, duration: 900}],
-                      }">
-                      <img
-                        class="w-16 h-16 mr-8 my-6"
-                        src="@/assets/img/laravel-hover.svg"
-                        alt="laravel_logo">
-                    </vue-anime>
-                  </div>
-                </div>
-                <div class="flex items-center justify-center md:justify-start">
-                  <div
-                    @mouseenter="vueLogoHover = true; vueVibrate = false"
-                    @mouseleave="vueLogoHover = false"
-                    class="flex items-center cursor-pointer transition-all-15 md:hover:scale-110 md:hover:rotate--15"
-                      :class="{'rotate-0': vueVibrate === false}">
-                    <vue-anime
-                      class="flex items-center"
-                      :delay="5000"
-                      :playing="vueVibrate"
-                      :autoplay="true"
-                      :loop="false"
-                      :animate="{
-                        translateX: [
-                        {value: 2, duration: 100},
-                        {value: -2, duration: 100},
-                        {value: 2, duration: 100},
-                        {value: -2, duration: 100},
-                        {value: 2, duration: 100},
-                        {value: -2, duration: 100},
-                        {value: 0, duration: 100}]
-                      }">
-                      <img
-                        class="w-16 h-16 my-6"
-                        src="@/assets/img/vue-hover.svg"
-                        alt="vue_logo">
-                    </vue-anime>
-                  </div>
-                </div>
+                <banner-tech-logo type="laravel" :animation="laravelVibrateAnimation" @mouseenter.native="laravelLogoHover = true" @mouseleave.native="laravelLogoHover = false" />
+                <banner-tech-logo type="vue" :animation="vueVibrateAnimation" @mouseenter.native="vueLogoHover = true" @mouseleave.native="vueLogoHover = false" />
               </div>
               <div
                 class="bg-tag-grey p-4 rounded items-center flex scale-x-0 h-16 w-48"
@@ -147,18 +81,7 @@
         v-scroll-to="'#products'"
         href="#">
         <vue-anime
-          :animate="{
-            translateY: [{
-              value: 10,
-              duration: 1000,
-              easing: 'easeInQuad'
-            },
-            {
-              value: 0,
-              duration: 1000,
-              easing: 'easeOutQuad'
-            }]
-          }"
+          :animate="downArrowAnimation"
           :loop="true"
           :playing="downArrowHover">
           <img
@@ -174,9 +97,11 @@
 <script>
 import headerBg from '@/assets/img/header-bg.svg'
 import BannerLaptop from '@/components/BannerLaptop'
+import BannerTechLogo from '@/components/BannerTechLogo'
 import { VueAnime } from '@/assets/anime'
 import { VueAnimeGroup } from '@/assets/anime'
 import { VueAnimeTimeLine } from '@/assets/anime'
+import { animations } from '@/assets/anime/banner-animations'
 
 export default {
   name: 'BannerSection',
@@ -184,7 +109,8 @@ export default {
     VueAnime,
     VueAnimeGroup,
     VueAnimeTimeLine,
-    BannerLaptop
+    BannerLaptop,
+    BannerTechLogo
   },
   data() {
     return {
@@ -195,9 +121,8 @@ export default {
       sentence2: "met bewezen moderne technologie",
       laravelLogoHover: false,
       vueLogoHover: false,
-      laravelVibrate: true,
-      vueVibrate: true,
-      downArrowHover: false
+      downArrowHover: false,
+      ...animations
     };
   },
   mounted() {
