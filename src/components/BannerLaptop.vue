@@ -9,9 +9,9 @@
         :playing="true"
         :loop="false"
         :delay="3000"
-        style="clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);"
+        style="clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);"
         :animate="{
-          clipPath: [
+          '-webkit-clip-path': [
           { value: 'polygon(0 0, 100% 0, 100% 0, 0 0)', duration: 1000, easing: 'linear'},
           { value: 'polygon(0 0, 100% 0, 100% 20%, 0 15%)', duration: 800, easing: 'linear'},
           { value: 'polygon(0 0, 100% 0, 100% 20%, 0 15%)', duration: 3000, easing: 'linear'},
