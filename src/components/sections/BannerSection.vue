@@ -98,9 +98,9 @@
 import headerBg from '@/assets/img/header-bg.svg'
 import BannerLaptop from '@/components/BannerLaptop'
 import BannerTechLogo from '@/components/BannerTechLogo'
-import { VueAnime } from 'vue-anime'
-import { VueAnimeGroup } from 'vue-anime'
-import { VueAnimeTimeLine } from 'vue-anime'
+import { VueAnime } from '@/assets/anime'
+import { VueAnimeGroup } from '@/assets/anime'
+import { VueAnimeTimeLine } from '@/assets/anime'
 import { animations } from '@/assets/anime/banner-animations'
 
 export default {
@@ -131,7 +131,9 @@ export default {
     this.waitForImageToLoad(loadedImage)
     .then(() => {
       this.headerBgReady = `url(${headerBg})`;
-      this.playing = true;
+      setTimeout(() => {
+        this.playing = true;
+      }, 400);
     })
   },
   methods: {

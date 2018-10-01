@@ -18,9 +18,13 @@
         <vue-anime
           ref="screenshot"
           class="hidden md:block absolute"
-          style="clip-path: circle(100% at 50% 50%);"
+          style="clip-path: circle(100% at 50% 50%); -webkit-clip-path: circle(100% at 50% 50%);"
           :animate="{
             clipPath: [
+              {value: 'circle(5% at 60% 40%)', duration: 200, easing: 'easeOutCubic'},
+              {value: 'circle(71.3% at 50% 50%)', duration: 600, easing: 'easeOutCubic'}
+              ],
+            webkitClipPath: [
               {value: 'circle(5% at 60% 40%)', duration: 200, easing: 'easeOutCubic'},
               {value: 'circle(71.3% at 50% 50%)', duration: 600, easing: 'easeOutCubic'}
               ],
@@ -57,7 +61,7 @@
 import { cases } from '@/assets/data/cases'
 import SingleCase from '@/components/SingleCase'
 import ButtonCircle from '@/components/shared/ButtonCircle'
-import { VueAnime } from 'vue-anime'
+import { VueAnime } from '@/assets/anime'
 
 export default {
   name: 'CaseSection',
