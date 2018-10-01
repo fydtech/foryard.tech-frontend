@@ -174,9 +174,9 @@
 <script>
 import headerBg from '@/assets/img/header-bg.svg'
 import BannerLaptop from '@/components/BannerLaptop'
-import { VueAnime } from 'vue-anime'
-import { VueAnimeGroup } from 'vue-anime'
-import { VueAnimeTimeLine } from 'vue-anime'
+import { VueAnime } from '@/assets/anime'
+import { VueAnimeGroup } from '@/assets/anime'
+import { VueAnimeTimeLine } from '@/assets/anime'
 
 export default {
   name: 'BannerSection',

@@ -66,9 +66,9 @@
 </template>
 
 <script>
-import { VueAnime } from 'vue-anime'
-import { VueAnimeGroup } from 'vue-anime'
-import { VueAnimeTimeLine } from 'vue-anime'
+import { VueAnime } from '@/assets/anime'
+import { VueAnimeGroup } from '@/assets/anime'
+import { VueAnimeTimeLine } from '@/assets/anime'
 import coffeeCup from '@/assets/img/coffee-shade.svg';
 import inViewport from 'vue-in-viewport-mixin'
 
