@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import { VueAnime } from 'vue-anime'
+  import { VueAnime } from '@/assets/anime'
 
 export default {
   name: 'BannerTechLogo',
