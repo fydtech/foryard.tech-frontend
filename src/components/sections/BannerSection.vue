@@ -1,7 +1,7 @@
 <template>
   <div
     id="banner"
-    class="relative flex flex-col justify-center relative py-16 min-h-banner md:min-h-vh-60 bg-right bg-cover"
+    class="relative flex flex-col justify-center relative py-16 h-vh-50 min-h-350 md:min-h-vh-60 bg-right bg-cover"
     :style="{ backgroundImage: headerBgReady }">
     <div
       id="split-screen"
@@ -79,13 +79,14 @@
       @mouseenter="downArrowHover = true" @mouseleave="downArrowHover = false" >
       <a
         v-scroll-to="'#products'"
-        href="#">
+        href="#"
+        class="w-3 h-3">
         <vue-anime
           :animate="downArrowAnimation"
           :loop="true"
           :playing="downArrowHover">
           <img
-            class="p-4"
+            class="block h-3 md:h-4 w-full"
             src="@/assets/img/chevron-down.svg"
             alt="chevron_down" />
         </vue-anime>
