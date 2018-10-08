@@ -1,7 +1,7 @@
 <template>
   <div
     id="banner"
-    class="relative flex flex-col justify-center relative py-16 h-vh-50 min-h-350 md:min-h-vh-50 bg-right bg-cover"
+    class="relative flex flex-col justify-center relative py-16 h-vh-50 min-h-350 md:min-h-vh-60 bg-right bg-cover"
     :style="{ backgroundImage: headerBgReady }">
     <div
       id="split-screen"
