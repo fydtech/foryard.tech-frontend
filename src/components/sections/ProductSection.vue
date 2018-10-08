@@ -1,9 +1,9 @@
 <template>
   <div
     id="products"
-    class="flex-col mb-24 mt-12">
+    class="flex-col mb-12 md:mb-24 mt-12">
     <div class="flex-1">
-      <h1 class="uppercase tracking-wide text-3xl lg:text-4xl py-12 text-center">Producten</h1>
+      <h1 class="uppercase tracking-wide text-3xl lg:text-4xl py-6 md:py-12 text-center">Producten</h1>
     </div>
     <div
       class="flex flex-col xl:flex-row px-10 justify-between">
