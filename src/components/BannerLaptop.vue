@@ -41,9 +41,9 @@
 </template>
 
 <script>
-import { VueAnime } from '@/assets/anime'
-import { VueAnimeGroup } from '@/assets/anime'
-import { VueAnimeTimeLine } from '@/assets/anime'
+import { VueAnime } from 'vue-anime'
+import { VueAnimeGroup } from 'vue-anime'
+import { VueAnimeTimeLine } from 'vue-anime'
 
 export default {
   name: "BannerLaptop",
