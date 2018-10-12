@@ -61,7 +61,7 @@
 import { cases } from '@/assets/data/cases'
 import SingleCase from '@/components/SingleCase'
 import ButtonCircle from '@/components/shared/ButtonCircle'
-import { VueAnime } from '@/assets/anime'
+import { VueAnime } from 'vue-anime'
 
 export default {
   name: 'CaseSection',
